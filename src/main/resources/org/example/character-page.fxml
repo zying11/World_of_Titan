@@ -19,7 +19,7 @@
             <Font size="17.0" />
          </font></Button>
       <ButtonBar layoutX="60.0" layoutY="102.0" prefHeight="40.0" prefWidth="200.0" />
-      <TableView fx:id="table" layoutX="54.0" layoutY="113.0" prefHeight="320.0" prefWidth="844.0">
+      <TableView fx:id="table" layoutX="54.0" layoutY="113.0" prefHeight="364.0" prefWidth="844.0">
         <columns>
           <TableColumn fx:id="img" prefWidth="155.19997787475586" text="image" />
           <TableColumn fx:id="name" prefWidth="128.00001525878906" text="name" />
@@ -32,7 +32,7 @@
             <TableColumn fx:id="leadership" prefWidth="116.800048828125" text="leadership" />
         </columns>
       </TableView>
-      <Button layoutX="313.0" layoutY="508.0" mnemonicParsing="false" text="sorting" />
+      <Button layoutX="313.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#SortingButtonPressed" text="sorting" />
       <Button layoutX="561.0" layoutY="508.0" mnemonicParsing="false" text="binary search" />
    </children>
 </AnchorPane>

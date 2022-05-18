@@ -36,21 +36,21 @@ public class CharacterController {
 
     public static LinkedList<CharacterData> list=new LinkedList<>();
 
-    LinkedList<String> nameList=new LinkedList<>();
+    private  LinkedList<String> nameList=new LinkedList<>();
 
-    LinkedList<String> heightList=new LinkedList<>();
+    private LinkedList<String> heightList=new LinkedList<>();
 
-    LinkedList<String> weightList=new LinkedList<>();
+    private LinkedList<String> weightList=new LinkedList<>();
 
-    LinkedList<String> strengthList=new LinkedList<>();
+    private LinkedList<String> strengthList=new LinkedList<>();
 
-    LinkedList<String> agilityList=new LinkedList<>();
+    private LinkedList<String> agilityList=new LinkedList<>();
 
-    LinkedList<String> intelligenceList=new LinkedList<>();
+    private LinkedList<String> intelligenceList=new LinkedList<>();
 
-    LinkedList<String> coordinationList=new LinkedList<>();
+    private LinkedList<String> coordinationList=new LinkedList<>();
 
-    LinkedList<String> leadershipList=new LinkedList<>();
+    private LinkedList<String> leadershipList=new LinkedList<>();
 
     @FXML
     private TableView table;
@@ -84,6 +84,17 @@ public class CharacterController {
 
     @FXML
     void initialize() throws IOException {
+        //clear element in the list everytime when come back to this method
+        nameList.clear();
+        heightList.clear();
+        weightList.clear();
+        strengthList.clear();
+        agilityList.clear();
+        intelligenceList.clear();
+        coordinationList.clear();
+        leadershipList.clear();
+        list.clear();
+
         //catch the text file, if TRUE -> store the information of characters in linked list
         try {
             Scanner input = new Scanner(new FileInputStream("characters.txt"));
@@ -98,8 +109,8 @@ public class CharacterController {
                 coordinationList.add(input.nextLine());
                 leadershipList.add(input.nextLine());
             }
-
             input.close();
+
         } catch (FileNotFoundException e) {
             System.out.println("File not found");
         }
@@ -120,13 +131,13 @@ public class CharacterController {
         weight.setCellValueFactory(new PropertyValueFactory<>("weight"));
         strength.setCellValueFactory(new PropertyValueFactory<>("strength"));
         agility.setCellValueFactory(new PropertyValueFactory<>("agility"));
-        intelligence.setCellValueFactory(new PropertyValueFactory<>("agility"));
+        intelligence.setCellValueFactory(new PropertyValueFactory<>("intelligence"));
         coordination.setCellValueFactory(new PropertyValueFactory<>("coordination"));
         leadership.setCellValueFactory(new PropertyValueFactory<>("leadership"));
 
         //add all the information of characters to a list
-        for(int i=0;i<nameList.size();i++){
-            list.add(new CharacterData(nameList.get(i),heightList.get(i), weightList.get(i),
+        for (int i = 0; i < nameList.size(); i++) {
+            list.add(new CharacterData(nameList.get(i), heightList.get(i), weightList.get(i),
                     strengthList.get(i), agilityList.get(i), intelligenceList.get(i),
                     coordinationList.get(i), leadershipList.get(i)));
 
@@ -139,6 +150,16 @@ public class CharacterController {
     void HomeButtonPressed(MouseEvent event) throws IOException{
         //forward to Home page when home button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("main-home-page.fxml")));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void SortingButtonPressed(MouseEvent event) throws  IOException{
+        ////forward to character sorting page when sorting button pressed
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sorting-character-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
