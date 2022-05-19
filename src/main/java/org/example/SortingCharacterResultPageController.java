@@ -62,7 +62,7 @@ public class SortingCharacterResultPageController {
 
             for (CharacterData data : heightRanking) {
                 try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("result-template.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sorting-result-template.fxml"));
                     AnchorPane anchorPane = fxmlLoader.load();
                     ResultTemplateController resultTemplateController = fxmlLoader.getController();
                     resultTemplateController.setData(data);
@@ -87,7 +87,7 @@ public class SortingCharacterResultPageController {
 
             for (CharacterData data : weightRanking) {
                 try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("result-template.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sorting-result-template.fxml"));
                     AnchorPane anchorPane = fxmlLoader.load();
                     ResultTemplateController resultTemplateController = fxmlLoader.getController();
                     resultTemplateController.setData(data);
@@ -112,7 +112,7 @@ public class SortingCharacterResultPageController {
 
             for (CharacterData data : strengthRanking) {
                 try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("result-template.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sorting-result-template.fxml"));
                     AnchorPane anchorPane = fxmlLoader.load();
                     ResultTemplateController resultTemplateController = fxmlLoader.getController();
                     resultTemplateController.setData(data);
@@ -137,7 +137,7 @@ public class SortingCharacterResultPageController {
 
             for (CharacterData data : agilityRanking) {
                 try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("result-template.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sorting-result-template.fxml"));
                     AnchorPane anchorPane = fxmlLoader.load();
                     ResultTemplateController resultTemplateController = fxmlLoader.getController();
                     resultTemplateController.setData(data);
@@ -162,7 +162,7 @@ public class SortingCharacterResultPageController {
 
             for (CharacterData data : intelligenceRanking) {
                 try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("result-template.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sorting-result-template.fxml"));
                     AnchorPane anchorPane = fxmlLoader.load();
                     ResultTemplateController resultTemplateController = fxmlLoader.getController();
                     resultTemplateController.setData(data);
@@ -186,7 +186,7 @@ public class SortingCharacterResultPageController {
 
             for (CharacterData data : coordinationRanking) {
                 try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("result-template.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sorting-result-template.fxml"));
                     AnchorPane anchorPane = fxmlLoader.load();
                     ResultTemplateController resultTemplateController = fxmlLoader.getController();
                     resultTemplateController.setData(data);
@@ -211,7 +211,7 @@ public class SortingCharacterResultPageController {
 
             for (CharacterData data : leadershipRanking) {
                 try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("result-template.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sorting-result-template.fxml"));
                     AnchorPane anchorPane = fxmlLoader.load();
                     ResultTemplateController resultTemplateController = fxmlLoader.getController();
                     resultTemplateController.setData(data);

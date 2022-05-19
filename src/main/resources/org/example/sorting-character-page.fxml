@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="600.0" prefWidth="940.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SortingCharacterPageController">
    <children>
       <Label layoutX="341.0" layoutY="132.0" text="Character Sorting">
@@ -35,7 +34,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField fx:id="inputAttribute" layoutX="296.0" layoutY="320.0" prefHeight="40.0" prefWidth="358.0" />
+      <TextField fx:id="inputAttribute" layoutX="296.0" layoutY="320.0" prefHeight="40.0" prefWidth="358.0" promptText="Enter attribution" />
       <Label fx:id="errorLabel" layoutX="297.0" layoutY="371.0" prefHeight="28.0" prefWidth="358.0" textFill="RED">
          <font>
             <Font name="System Bold" size="12.0" />
