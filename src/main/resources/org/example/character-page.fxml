@@ -30,7 +30,7 @@
             <InnerShadow />
          </effect></Button>
       <ButtonBar layoutX="60.0" layoutY="102.0" prefHeight="40.0" prefWidth="200.0" />
-      <TableView fx:id="table" blendMode="HARD_LIGHT" layoutX="54.0" layoutY="113.0" prefHeight="364.0" prefWidth="844.0">
+      <TableView fx:id="table" blendMode="HARD_LIGHT" layoutX="54.0" layoutY="113.0" prefHeight="364.0" prefWidth="844.0" style="-fx-background-color: AZURE;">
         <columns>
           <TableColumn fx:id="img" prefWidth="155.19997787475586" text="Image" />
           <TableColumn fx:id="name" prefWidth="128.00001525878906" text="Name" />
