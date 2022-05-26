@@ -5,34 +5,60 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.CharacterController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.CharacterController">
    <children>
-      <Label layoutX="381.0" layoutY="23.0" text="Character">
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Image/AOT%20characters.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="60.0" layoutY="19.0" text="Character" textFill="WHITE">
          <font>
-            <Font size="45.0" />
+            <Font name="Copperplate Gothic Light" size="64.0" />
          </font></Label>
-      <Button layoutX="830.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#HomeButtonPressed" prefHeight="40.0" prefWidth="75.0" text="Home">
+      <Button layoutX="818.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#HomeButtonPressed" prefHeight="40.0" prefWidth="87.0" style="-fx-background-color: LIGHTGOLDENRODYELLOW; -fx-background-radius: 30;" text="Home">
          <font>
-            <Font size="17.0" />
-         </font></Button>
+            <Font name="Footlight MT Light" size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
       <ButtonBar layoutX="60.0" layoutY="102.0" prefHeight="40.0" prefWidth="200.0" />
-      <TableView fx:id="table" layoutX="54.0" layoutY="113.0" prefHeight="364.0" prefWidth="844.0">
+      <TableView fx:id="table" blendMode="HARD_LIGHT" layoutX="54.0" layoutY="113.0" prefHeight="364.0" prefWidth="844.0" style="-fx-background-color: AZURE;">
         <columns>
-          <TableColumn fx:id="img" prefWidth="155.19997787475586" text="image" />
-          <TableColumn fx:id="name" prefWidth="128.00001525878906" text="name" />
-            <TableColumn fx:id="height" prefWidth="58.40008544921875" text="height" />
-            <TableColumn fx:id="weight" prefWidth="63.199951171875" text="weight" />
-            <TableColumn fx:id="strength" prefWidth="76.800048828125" text="strength" />
-            <TableColumn fx:id="agility" prefWidth="70.39996337890625" text="agility" />
-            <TableColumn fx:id="intelligence" prefWidth="90.39996337890625" text="intelligence" />
-            <TableColumn fx:id="coordination" prefWidth="99.2000732421875" text="coordination" />
-            <TableColumn fx:id="leadership" prefWidth="116.800048828125" text="leadership" />
+          <TableColumn fx:id="img" prefWidth="155.19997787475586" text="Image" />
+          <TableColumn fx:id="name" prefWidth="128.00001525878906" text="Name" />
+            <TableColumn fx:id="height" prefWidth="58.40008544921875" text="Height" />
+            <TableColumn fx:id="weight" prefWidth="63.199951171875" text="Weight" />
+            <TableColumn fx:id="strength" prefWidth="76.800048828125" text="Strength" />
+            <TableColumn fx:id="agility" prefWidth="70.39996337890625" text="Agility" />
+            <TableColumn fx:id="intelligence" prefWidth="90.39996337890625" text="Intelligence" />
+            <TableColumn fx:id="coordination" prefWidth="99.2000732421875" text="Coordination" />
+            <TableColumn fx:id="leadership" prefWidth="116.800048828125" text="Leadership" />
         </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
       </TableView>
-      <Button layoutX="313.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#SortingButtonPressed" text="sorting" />
-      <Button layoutX="561.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#BinarySearchButtonPressed" text="binary search" />
+      <Button layoutX="260.0" layoutY="502.0" mnemonicParsing="false" onMouseClicked="#SortingButtonPressed" prefHeight="41.0" prefWidth="99.0" style="-fx-background-color: AQUA; -fx-background-radius: 20;" text="Sorting">
+         <font>
+            <Font name="Footlight MT Light" size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button layoutX="560.0" layoutY="502.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="148.0" style="-fx-background-color: AQUAMARINE; -fx-background-radius: 20;" text="Binary Search">
+         <font>
+            <Font name="Footlight MT Light" size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
    </children>
 </AnchorPane>

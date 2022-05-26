@@ -4,35 +4,55 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="940.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SortingCharacterPageController">
+<AnchorPane prefHeight="600.0" prefWidth="940.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SortingCharacterPageController">
    <children>
-      <Label layoutX="341.0" layoutY="132.0" text="Character Sorting">
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Image/AOT%20characters%20sorting.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="300.0" layoutY="143.0" style="-fx-background-color: BURLYWOOD; -fx-background-radius: 13; -fx-background-insets: 4; -fx-blend-mode: HARD_LIGHT;" text="Character Sorting" textFill="#3c3c39">
          <font>
-            <Font size="40.0" />
+            <Font name="Eras Medium ITC" size="44.0" />
          </font>
       </Label>
-      <Button layoutX="845.0" layoutY="541.0" mnemonicParsing="false" onMouseClicked="#HomeButtonPressed" prefHeight="40.0" prefWidth="75.0" text="Home">
+      <Button layoutX="793.0" layoutY="534.0" mnemonicParsing="false" onMouseClicked="#HomeButtonPressed" prefHeight="40.0" prefWidth="89.0" style="-fx-background-color: LIGHTGREEN; -fx-background-radius: 25;" text="Home">
          <font>
-            <Font size="17.0" />
+            <Font name="Imprint MT Shadow" size="20.0" />
          </font>
+         <effect>
+            <InnerShadow />
+         </effect>
       </Button>
-      <Button layoutX="59.0" layoutY="534.0" mnemonicParsing="false" onAction="#BackToCharacterButtonPressed" prefHeight="40.0" prefWidth="75.0" text="Back">
+      <Button layoutX="59.0" layoutY="534.0" mnemonicParsing="false" onAction="#BackToCharacterButtonPressed" prefHeight="40.0" prefWidth="75.0" style="-fx-background-color: LIGHTBLUE; -fx-background-radius: 25;" text="Back">
          <font>
-            <Font size="17.0" />
+            <Font name="Imprint MT Shadow" size="20.0" />
          </font>
+         <effect>
+            <InnerShadow />
+         </effect>
       </Button>
-      <Label layoutX="292.0" layoutY="241.0" text="Search for your soldier based on their attributes ">
+      <Label layoutX="394.0" layoutY="371.0" prefHeight="100.0" prefWidth="151.0" style="-fx-background-color: CORNSILK; -fx-background-insets: 4;" text="Search for your soldier based on their attributes " textAlignment="CENTER" textFill="#654040" wrapText="true">
          <font>
-            <Font size="19.0" />
+            <Font name="High Tower Text" size="19.0" />
          </font>
       </Label>
-      <Button layoutX="655.0" layoutY="320.0" mnemonicParsing="false" onAction="#SearchAttributeButtonPressed" prefHeight="40.0" text="search">
+      <Button layoutX="655.0" layoutY="320.0" mnemonicParsing="false" onAction="#SearchAttributeButtonPressed" prefHeight="40.0" style="-fx-background-color: INDIANRED;" text="SEARCH">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <font>
+            <Font name="Imprint MT Shadow" size="13.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
       </Button>
       <TextField fx:id="inputAttribute" layoutX="296.0" layoutY="320.0" prefHeight="40.0" prefWidth="358.0" promptText="Enter attribution" />
       <Label fx:id="errorLabel" layoutX="297.0" layoutY="371.0" prefHeight="28.0" prefWidth="358.0" textFill="RED">
