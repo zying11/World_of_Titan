@@ -68,6 +68,8 @@ public class CharacterData {
         return leadership;
     }
 
+
+
     //setter method
 
     public void setName(String name) {
@@ -115,6 +117,8 @@ public class CharacterData {
                 ", leadership='" + leadership + '\'' +
                 '}'+'\n';
     }
+
+
 }
 
 class HeightComparator implements Comparator<CharacterData> {

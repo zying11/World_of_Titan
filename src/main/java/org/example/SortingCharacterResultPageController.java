@@ -32,7 +32,7 @@ public class SortingCharacterResultPageController {
      */
     private Parent root;
 
-    List<CharacterData> heightRanking=new ArrayList<>();
+    static List<CharacterData> heightRanking=new ArrayList<>();
     List<CharacterData> weightRanking=new ArrayList<>();
     List<CharacterData> strengthRanking=new ArrayList<>();
     List<CharacterData> agilityRanking=new ArrayList<>();

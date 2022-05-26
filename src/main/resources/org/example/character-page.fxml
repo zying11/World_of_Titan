@@ -33,6 +33,6 @@
         </columns>
       </TableView>
       <Button layoutX="313.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#SortingButtonPressed" text="sorting" />
-      <Button layoutX="561.0" layoutY="508.0" mnemonicParsing="false" text="binary search" />
+      <Button layoutX="561.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#BinarySearchButtonPressed" text="binary search" />
    </children>
 </AnchorPane>
