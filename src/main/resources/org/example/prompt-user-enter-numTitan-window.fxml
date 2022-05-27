@@ -13,7 +13,7 @@
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Pictures/AOT%20titan.jpg" />
+            <Image url="@../../Image/AOT%20titan.jpg" />
          </image>
       </ImageView>
       <Label layoutX="114.0" layoutY="114.0" prefHeight="22.0" prefWidth="360.0" style="-fx-background-color: PEACHPUFF; -fx-blend-mode: HARD_LIGHT;" text="Enter number of Titan to be generated ">
