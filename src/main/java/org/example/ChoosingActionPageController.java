@@ -39,24 +39,13 @@ public class ChoosingActionPageController {
         stage.show();
     }
 
-    /**
-     * Generate titan button at choosing action page
-     * A window will pop up after user clicking it
-     * This window is used to let user input number of titan to be generated
-     *
-     * @throws IOException when the resource file is not found
-     */
     @FXML
     void GenerateTitanButtonPressed(MouseEvent event) throws IOException{
-        //forward to prompt user enter number of titan template when generate titan button pressed
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("prompt-user-enter-numTitan-window.fxml"));
-        Parent root = fxmlLoader.load();
-        Stage stage = new Stage();
-        stage.initStyle(StageStyle.DECORATED);
-        stage.setTitle("Generate Titan");
-        stage.setScene(new Scene(root));
-        stage.setResizable(false);
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.showAndWait();
+        //forward to prompt user enter number of titan page when generate titan button pressed
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("prompt-user-enter-numTitan-page.fxml")));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }
