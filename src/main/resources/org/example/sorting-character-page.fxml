@@ -39,7 +39,7 @@
             <InnerShadow />
          </effect>
       </Button>
-      <Label layoutX="394.0" layoutY="418.0" prefHeight="100.0" prefWidth="151.0" style="-fx-background-color: CORNSILK; -fx-background-insets: 4; -fx-blend-mode: HARD_LIGHT;" text="Search for your soldier based on their attributes " textAlignment="CENTER" textFill="#654040" wrapText="true">
+      <Label layoutX="394.0" layoutY="421.0" prefHeight="100.0" prefWidth="151.0" style="-fx-background-color: CORNSILK; -fx-background-insets: 4; -fx-blend-mode: darken;" text="Search for your soldier based on their attributes " textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="High Tower Text" size="19.0" />
          </font>
