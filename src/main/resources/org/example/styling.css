@@ -1,25 +1,39 @@
+// character button in main-home-page-fxml
 #btn1{
-    -fx-font-weight:bold;
-    -fx-background-color: #457b9d;
+    -fx-background-color:#EEE8AA;
     -fx-background-radius:30;
-    -fx-text-fill:white;
+    -fx-border-radius:30;
+    -fx-text-fill:#1f0c04;
 }
 #btn1:hover{
-    -fx-font-weight:bold;
     -fx-background-color:white;
     -fx-background-radius:30;
     -fx-text-fill: #457b9d;
-    -fx-border-color: #457b9d;
     -fx-border-radius:30;
-    -fx-border-width:2;
 }
 #btn1:pressed{
-    -fx-font-weight:bold;
-    -fx-background-color:#f1faee;
+    -fx-background-color:#EEE8AA;
     -fx-background-radius:30;
-    -fx-text-fill: #457b9d;
-    -fx-border-color: #457b9d;
+    -fx-text-fill: #1f0c04;
     -fx-border-radius:30;
-    -fx-border-width:3;
+}
 
+// battle button in main-home-page-fxml
+#btn2{
+    -fx-background-color:#FF4500;
+    -fx-background-radius:25;
+    -fx-border-radius:25;
+    -fx-text-fill:black;
+}
+#btn2:hover{
+    -fx-background-color:white;
+    -fx-background-radius:25;
+    -fx-text-fill: #457b9d;
+    -fx-border-radius:25;
+}
+#btn2:pressed{
+    -fx-background-color:#FF4500;
+    -fx-background-radius:25;
+    -fx-text-fill: black;
+    -fx-border-radius:25;
 }
