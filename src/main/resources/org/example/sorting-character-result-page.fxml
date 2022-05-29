@@ -22,17 +22,17 @@
       </ImageView>
       <Pane blendMode="OVERLAY" layoutX="127.0" layoutY="134.0" prefHeight="43.0" prefWidth="686.0" style="-fx-background-color: black;">
          <children>
-            <Label layoutX="41.0" layoutY="13.0" text="Ranking" textFill="WHITE">
+            <Label layoutX="37.0" layoutY="6.0" text="Ranking" textFill="WHITE">
                <font>
-                  <Font name="Century Schoolbook" size="18.0" />
+                  <Font name="High Tower Text" size="25.0" />
                </font></Label>
-            <Label layoutX="315.0" layoutY="13.0" text="Name" textFill="WHITE">
+            <Label layoutX="311.0" layoutY="6.0" text="Name" textFill="WHITE">
                <font>
-                  <Font name="Century Schoolbook" size="18.0" />
+                  <Font name="High Tower Text" size="25.0" />
                </font></Label>
-            <Label layoutX="594.0" layoutY="13.0" text="Value" textFill="WHITE">
+            <Label layoutX="582.0" layoutY="6.0" text="Value" textFill="WHITE">
                <font>
-                  <Font name="Century Schoolbook" size="18.0" />
+                  <Font name="Century Schoolbook" size="25.0" />
                </font></Label>
          </children>
       </Pane>
