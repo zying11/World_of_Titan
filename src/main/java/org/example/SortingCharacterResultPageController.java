@@ -105,7 +105,7 @@ public class SortingCharacterResultPageController {
             RankingLabel.setText("Strength Ranking");
 
             for (CharacterData character : CharacterController.list) {
-                System.out.println("Name: " + character.getName() + ", " + "Strength: " + character.getWeight());
+                System.out.println("Name: " + character.getName() + ", " + "Strength: " + character.getStrength());
                 strengthRanking.add(new CharacterData(character.getName(), character.getStrength()));
             }
             System.out.println();

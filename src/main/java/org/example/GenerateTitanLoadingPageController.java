@@ -1,16 +1,15 @@
 package org.example;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class PromptUserEnterNumTitanWindowController {
+public class GenerateTitanLoadingPageController {
+
     /**
      * Stage is used to represent a window in a JavaFX desktop application
      */
@@ -27,20 +26,15 @@ public class PromptUserEnterNumTitanWindowController {
     private Parent root;
 
     @FXML
-    private TextField numOfTitanGenerate;
+    private Label numberTitanLabel;
 
     @FXML
-    private Label errorLabel;
+    void initialize() throws IOException{
+        numberTitanLabel.setText(PromptUserEnterNumTitanPageController.input);
 
-    @FXML
-    void GoGenerateTitanButtonPressed(ActionEvent actionEvent) throws IOException{
-        boolean inputError = false;
-
-        //if input is empty
-        if (numOfTitanGenerate.getText().isEmpty()) {
-            inputError=true;
-            System.out.println("Empty input");
-            errorLabel.setText("Empty field!!");
-        }
     }
+
+
+
+
 }
