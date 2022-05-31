@@ -176,7 +176,4 @@ public class CharacterController {
         stage.setScene(scene);
         stage.show();
     }
-
-
-
 }

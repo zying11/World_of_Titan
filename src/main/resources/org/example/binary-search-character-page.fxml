@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+
 <AnchorPane prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.BinarySearchCharacterPageController">
    <children>
       <Button layoutX="796.0" layoutY="530.0" mnemonicParsing="false" onMouseClicked="#HomeButtonPressed" prefHeight="30.0" prefWidth="89.0" text="Home" />

@@ -13,10 +13,10 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 
 public class BinarySearchCharacterPageController {
 
@@ -47,7 +47,6 @@ public class BinarySearchCharacterPageController {
     @FXML
     private Label errorLabel;
 
-
     List<String> nameSort = new ArrayList<>();
 
     List<Integer> heightSort = new ArrayList<>();
@@ -72,18 +71,17 @@ public class BinarySearchCharacterPageController {
     //to get user's input attribute value for display purpose in popup window
     public static String input_attribute_value;
 
-
     @FXML
     void SearchAttributeButtonPressed(ActionEvent actionEvent) throws IOException {
 
         boolean indicator = true;
-
 
         //if any search field is empty
         if (inputAttribute.getText().isEmpty() || inputAttributeValue.getText().isEmpty() || inputAttribute.getText().isEmpty() && inputAttributeValue.getText().isEmpty()) {
             indicator = true;
             System.out.println("There is an empty input!");
             errorLabel.setText("Please do not leave search field empty!");
+
             return;
 
         }
@@ -257,10 +255,7 @@ public class BinarySearchCharacterPageController {
 
 
     }
-
-
-
-
+ 
     static int binarySearch(List<Integer> arr, int l, int r, int target) {
         if (r < l)
             return -1;
