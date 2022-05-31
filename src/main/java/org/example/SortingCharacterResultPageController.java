@@ -64,7 +64,7 @@ public class SortingCharacterResultPageController {
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sorting-result-template.fxml"));
                     AnchorPane anchorPane = fxmlLoader.load();
-                    ResultTemplateController resultTemplateController = fxmlLoader.getController();
+                    SortingResultTemplateController resultTemplateController = fxmlLoader.getController();
                     resultTemplateController.setData(data);
                     vBox.getChildren().add(anchorPane);
                 } catch (IOException e) {
@@ -89,7 +89,7 @@ public class SortingCharacterResultPageController {
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sorting-result-template.fxml"));
                     AnchorPane anchorPane = fxmlLoader.load();
-                    ResultTemplateController resultTemplateController = fxmlLoader.getController();
+                    SortingResultTemplateController resultTemplateController = fxmlLoader.getController();
                     resultTemplateController.setData(data);
                     vBox.getChildren().add(anchorPane);
                 } catch (IOException e) {
@@ -114,7 +114,7 @@ public class SortingCharacterResultPageController {
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sorting-result-template.fxml"));
                     AnchorPane anchorPane = fxmlLoader.load();
-                    ResultTemplateController resultTemplateController = fxmlLoader.getController();
+                    SortingResultTemplateController resultTemplateController = fxmlLoader.getController();
                     resultTemplateController.setData(data);
                     vBox.getChildren().add(anchorPane);
                 } catch (IOException e) {
@@ -139,7 +139,7 @@ public class SortingCharacterResultPageController {
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sorting-result-template.fxml"));
                     AnchorPane anchorPane = fxmlLoader.load();
-                    ResultTemplateController resultTemplateController = fxmlLoader.getController();
+                    SortingResultTemplateController resultTemplateController = fxmlLoader.getController();
                     resultTemplateController.setData(data);
                     vBox.getChildren().add(anchorPane);
                 } catch (IOException e) {
@@ -164,7 +164,7 @@ public class SortingCharacterResultPageController {
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sorting-result-template.fxml"));
                     AnchorPane anchorPane = fxmlLoader.load();
-                    ResultTemplateController resultTemplateController = fxmlLoader.getController();
+                    SortingResultTemplateController resultTemplateController = fxmlLoader.getController();
                     resultTemplateController.setData(data);
                     vBox.getChildren().add(anchorPane);
                 } catch (IOException e) {
@@ -188,7 +188,7 @@ public class SortingCharacterResultPageController {
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sorting-result-template.fxml"));
                     AnchorPane anchorPane = fxmlLoader.load();
-                    ResultTemplateController resultTemplateController = fxmlLoader.getController();
+                    SortingResultTemplateController resultTemplateController = fxmlLoader.getController();
                     resultTemplateController.setData(data);
                     vBox.getChildren().add(anchorPane);
                 } catch (IOException e) {
@@ -213,7 +213,7 @@ public class SortingCharacterResultPageController {
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sorting-result-template.fxml"));
                     AnchorPane anchorPane = fxmlLoader.load();
-                    ResultTemplateController resultTemplateController = fxmlLoader.getController();
+                    SortingResultTemplateController resultTemplateController = fxmlLoader.getController();
                     resultTemplateController.setData(data);
                     vBox.getChildren().add(anchorPane);
                 } catch (IOException e) {

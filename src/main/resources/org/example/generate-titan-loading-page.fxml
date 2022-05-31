@@ -20,7 +20,7 @@
          </font>
       </Label>
       <Line endX="7.4000244140625" layoutX="525.0" layoutY="316.0" startX="-100.0" />
-      <Button layoutX="794.0" layoutY="527.0" mnemonicParsing="false" text="Result">
+      <Button layoutX="794.0" layoutY="527.0" mnemonicParsing="false" onMouseClicked="#ResultButtonPressed" text="Result">
          <font>
             <Font size="19.0" />
          </font>

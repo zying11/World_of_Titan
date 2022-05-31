@@ -50,7 +50,7 @@ public class PromptUserEnterNumTitanPageController {
 
         else if(Character.isDigit(numOfTitanGenerate.getText().charAt(0))){
             input=numOfTitanGenerate.getText();
-            System.out.println("Generating titan");
+            System.out.println("Number of Titans: "+input);
         }
 
         else{
