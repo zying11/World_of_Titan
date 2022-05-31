@@ -1,5 +1,6 @@
 package org.example;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -167,7 +168,7 @@ public class CharacterController {
     }
 
     @FXML
-    void BinarySearchButtonPressed(MouseEvent event) throws  IOException{
+    void BinarySearchButtonPressed(ActionEvent event) throws  IOException{
         //forward to character sorting page when sorting button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("binary-search-character-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -175,7 +176,4 @@ public class CharacterController {
         stage.setScene(scene);
         stage.show();
     }
-
-
-
 }

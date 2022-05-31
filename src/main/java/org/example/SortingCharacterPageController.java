@@ -116,7 +116,7 @@ public class SortingCharacterPageController {
 
     @FXML
     void BackToCharacterButtonPressed(ActionEvent event) throws IOException {
-        //forward to Home page when home button pressed
+        //forward to Character page when back button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("character-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.BinarySearchCharacterPageController">
    <children>
-      <Button layoutX="796.0" layoutY="530.0" mnemonicParsing="false" onAction="#HomeButtonPressed" prefHeight="30.0" prefWidth="89.0" text="Home" />
+      <Button layoutX="796.0" layoutY="530.0" mnemonicParsing="false" onMouseClicked="#HomeButtonPressed" prefHeight="30.0" prefWidth="89.0" text="Home" />
       <Label layoutX="329.0" layoutY="137.0" prefHeight="46.0" prefWidth="330.0" text="Binary Search">
          <font>
             <Font size="41.0" />
@@ -26,7 +26,7 @@
       <Button layoutX="59.0" layoutY="530.0" mnemonicParsing="false" onAction="#BackToCharacterButtonPressed" prefHeight="30.0" prefWidth="89.0" text="Back" />
       <Label fx:id="errorLabel" layoutX="311.0" layoutY="345.0" prefHeight="12.0" prefWidth="284.0" textFill="RED">
          <font>
-            <Font size="20.0" />
+            <Font size="11.0" />
          </font>
       </Label>
    </children>
