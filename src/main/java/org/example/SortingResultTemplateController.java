@@ -3,7 +3,7 @@ package org.example;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class ResultTemplateController {
+public class SortingResultTemplateController {
     @FXML
     private Label characterName;
 
