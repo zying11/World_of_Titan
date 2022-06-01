@@ -73,17 +73,17 @@ public class BinarySearchCharacterPageController {
 
     @FXML
     void SearchAttributeButtonPressed(ActionEvent actionEvent) throws IOException {
+        // clear the error label each time when the pop up window close
+        errorLabel.setText("");
 
+        // control whether go to next page when search button click
         boolean indicator = true;
 
         //if any search field is empty
         if (inputAttribute.getText().isEmpty() || inputAttributeValue.getText().isEmpty() || inputAttribute.getText().isEmpty() && inputAttributeValue.getText().isEmpty()) {
-            indicator = true;
             System.out.println("There is an empty input!");
             errorLabel.setText("Please do not leave search field empty!");
-
             return;
-
         }
 
         else if (inputAttribute.getText().equalsIgnoreCase("height")) {
@@ -103,9 +103,6 @@ public class BinarySearchCharacterPageController {
             output = (countOccurrences(nameSort, heightSort, heightSort.size(),
                     Integer.parseInt(inputAttributeValue.getText())));
 
-            System.out.println(output);
-
-
         } else if (inputAttribute.getText().equalsIgnoreCase("weight")) {
             indicator = false;
             inputWeight = true;
@@ -122,8 +119,6 @@ public class BinarySearchCharacterPageController {
             }
             output = (countOccurrences(nameSort, weightSort, weightSort.size(),
                     Integer.parseInt(inputAttributeValue.getText())));
-
-            System.out.println(output);
 
         } else if (inputAttribute.getText().equalsIgnoreCase("strength")) {
             indicator = false;
@@ -142,8 +137,6 @@ public class BinarySearchCharacterPageController {
             output = (countOccurrences(nameSort, strengthSort, strengthSort.size(),
                     Integer.parseInt(inputAttributeValue.getText())));
 
-            System.out.println(output);
-
         } else if (inputAttribute.getText().equalsIgnoreCase("agility")) {
             indicator = false;
             inputAgility = true;
@@ -154,14 +147,12 @@ public class BinarySearchCharacterPageController {
             Collections.sort(CharacterController.list, new AgilityComparator());
 
             for (CharacterData character : CharacterController.list) {
-                System.out.println("Name: " + character.getName() + ", " + "Agility: " + character.getStrength());
+                System.out.println("Name: " + character.getName() + ", " + "Agility: " + character.getAgility());
                 nameSort.add(character.getName());
                 agilitySort.add(Integer.valueOf(character.getAgility()));
             }
             output = (countOccurrences(nameSort, agilitySort, agilitySort.size(),
                     Integer.parseInt(inputAttributeValue.getText())));
-
-            System.out.println(output);
 
         } else if (inputAttribute.getText().equalsIgnoreCase("intelligence")) {
             indicator = false;
@@ -180,8 +171,6 @@ public class BinarySearchCharacterPageController {
             output = (countOccurrences(nameSort, intelligenceSort, intelligenceSort.size(),
                     Integer.parseInt(inputAttributeValue.getText())));
 
-            System.out.println(output);
-
         } else if (inputAttribute.getText().equalsIgnoreCase("coordination")) {
             indicator = false;
             inputCoordination = true;
@@ -198,8 +187,6 @@ public class BinarySearchCharacterPageController {
             }
             output = (countOccurrences(nameSort, coordinationSort, coordinationSort.size(),
                     Integer.parseInt(inputAttributeValue.getText())));
-
-            System.out.println(output);
 
         } else if (inputAttribute.getText().equalsIgnoreCase("leadership")) {
             indicator = false;
@@ -218,8 +205,6 @@ public class BinarySearchCharacterPageController {
             output = (countOccurrences(nameSort, leadershipSort, leadershipSort.size(),
                     Integer.parseInt(inputAttributeValue.getText())));
 
-            System.out.println(output);
-
         }
         //if input attribute does not exist
         else if (!(inputAttribute.getText().equalsIgnoreCase("height") ||
@@ -230,19 +215,25 @@ public class BinarySearchCharacterPageController {
                 inputAttribute.getText().equalsIgnoreCase("coordination") ||
                 inputAttribute.getText().equalsIgnoreCase("leadership"))
         ) {
-            indicator = true;
             errorLabel.setText("Invalid attribute!!");
             System.out.println("Invalid attribute!!");
-
         }
 
-
+        // check whether the target value found or not
+        if(output.isEmpty()){
+            indicator=true;
+            errorLabel.setText("Attribute value not found");
+            System.out.println("Attribute value not found");
+        }
+        else{
+            System.out.println(output);
+        }
 
         if (!indicator) {
             Stage stage = new Stage();
             Parent root;
             stage.setTitle("Result Window");
-            //forward to Character Sorting Result page when search button pressed
+            //forward to Binary Search Result window when search button pressed
             root = FXMLLoader.load((getClass().getResource("binary-search-result.fxml")));
             stage.setScene(new Scene(root));
             stage.setResizable(false);
@@ -252,8 +243,6 @@ public class BinarySearchCharacterPageController {
             stage.initOwner(inputAttribute.getScene().getWindow());
             stage.showAndWait();
         }
-
-
     }
  
     static int binarySearch(List<Integer> arr, int l, int r, int target) {
@@ -289,7 +278,7 @@ public class BinarySearchCharacterPageController {
 
         // If element is not present
         if (ind == -1)
-            return null;
+            return "";
 
         else {
             // Count elements on left side.
