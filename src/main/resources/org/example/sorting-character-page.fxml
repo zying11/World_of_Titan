@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="940.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SortingCharacterPageController">
+<AnchorPane prefHeight="600.0" prefWidth="940.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SortingCharacterPageController">
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
@@ -41,7 +41,7 @@
       </Button>
       <Label layoutX="394.0" layoutY="421.0" prefHeight="100.0" prefWidth="151.0" style="-fx-background-color: CORNSILK; -fx-background-insets: 4; -fx-blend-mode: darken;" text="Search for your soldier based on their attributes " textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="High Tower Text" size="19.0" />
+            <Font name="Cooper Black" size="19.0" />
          </font>
          <effect>
             <DropShadow />
@@ -61,7 +61,7 @@
       <TextField fx:id="inputAttribute" layoutX="296.0" layoutY="320.0" prefHeight="40.0" prefWidth="358.0" promptText="Enter attribution" />
       <Label fx:id="errorLabel" layoutX="297.0" layoutY="371.0" prefHeight="28.0" prefWidth="358.0" textFill="RED">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="Franklin Gothic Heavy" size="18.0" />
          </font>
       </Label>
    </children>
