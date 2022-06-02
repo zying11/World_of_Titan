@@ -2,16 +2,41 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="111.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.GenerateTitanResultTemplateController">
+<AnchorPane prefHeight="111.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.GenerateTitanResultTemplateController">
    <children>
-      <Label fx:id="index" layoutX="25.0" layoutY="47.0" text="titan" textAlignment="CENTER" />
-      <Label fx:id="height" layoutX="201.0" layoutY="47.0" text="height" textAlignment="CENTER" />
-      <Label fx:id="type" layoutX="75.0" layoutY="48.0" text="type" textAlignment="CENTER" />
-      <Label fx:id="walkingLeg" layoutX="286.0" layoutY="47.0" text="walking leg" textAlignment="CENTER" />
-      <Label fx:id="runSpeed" layoutX="391.0" layoutY="48.0" text="running speed" textAlignment="CENTER" />
-      <Label fx:id="walkPattern" layoutX="497.0" layoutY="48.0" text="walking pattern" textAlignment="CENTER" />
-      <Label fx:id="climbSkill" layoutX="630.0" layoutY="48.0" text="climbing skill" textAlignment="CENTER" />
-      <Label fx:id="dangerRisk" layoutX="737.0" layoutY="48.0" text="danger risk" textAlignment="CENTER" />
+      <Label fx:id="index" layoutX="25.0" layoutY="47.0" text="titan" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font></Label>
+      <Label fx:id="height" layoutX="201.0" layoutY="47.0" text="height" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font></Label>
+      <Label fx:id="type" layoutX="75.0" layoutY="48.0" text="type" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font></Label>
+      <Label fx:id="walkingLeg" layoutX="286.0" layoutY="47.0" text="walking leg" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font></Label>
+      <Label fx:id="runSpeed" layoutX="391.0" layoutY="48.0" text="running speed" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font></Label>
+      <Label fx:id="walkPattern" layoutX="497.0" layoutY="48.0" text="walking pattern" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font></Label>
+      <Label fx:id="climbSkill" layoutX="623.0" layoutY="48.0" text="climbing skill" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font></Label>
+      <Label fx:id="dangerRisk" layoutX="743.0" layoutY="48.0" text="danger risk" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font></Label>
    </children>
 </AnchorPane>
