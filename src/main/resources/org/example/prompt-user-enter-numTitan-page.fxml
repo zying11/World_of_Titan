@@ -35,9 +35,9 @@
          <effect>
             <InnerShadow />
          </effect></Button>
-      <Label fx:id="errorLabel" layoutX="343.0" layoutY="363.0" prefHeight="18.0" prefWidth="249.0" textFill="RED">
+      <Label fx:id="errorLabel" layoutX="347.0" layoutY="360.0" prefHeight="18.0" prefWidth="249.0" textFill="RED">
          <font>
-            <Font name="Franklin Gothic Heavy" size="14.0" />
+            <Font name="Consolas" size="14.0" />
          </font></Label>
    </children>
 </AnchorPane>
