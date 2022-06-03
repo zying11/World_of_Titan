@@ -27,28 +27,28 @@
          <effect>
             <InnerShadow />
          </effect></Button>
-      <Button layoutX="169.0" layoutY="185.0" mnemonicParsing="false" onMouseClicked="#GenerateTitanButtonPressed" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Generate Titan" wrapText="true">
+      <Button layoutX="169.0" layoutY="126.0" mnemonicParsing="false" onMouseClicked="#GenerateTitanButtonPressed" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Generate Titan" wrapText="true">
          <font>
             <Font name="Sylfaen" size="16.0" />
          </font>
          <effect>
             <InnerShadow />
          </effect></Button>
-      <Button layoutX="169.0" layoutY="126.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Path Finding">
+      <Button layoutX="169.0" layoutY="183.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Path Finding">
          <font>
             <Font name="Sylfaen" size="16.0" />
          </font>
          <effect>
             <InnerShadow />
          </effect></Button>
-      <Button alignment="CENTER" layoutX="169.0" layoutY="246.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Word converter" textAlignment="CENTER" wrapText="true">
+      <Button alignment="CENTER" layoutX="169.0" layoutY="242.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Word converter" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Sylfaen" size="16.0" />
          </font>
          <effect>
             <InnerShadow />
          </effect></Button>
-      <Button layoutX="169.0" layoutY="310.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Weakest wall">
+      <Button layoutX="169.0" layoutY="300.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Weakest wall">
          <font>
             <Font name="Sylfaen" size="16.0" />
          </font>

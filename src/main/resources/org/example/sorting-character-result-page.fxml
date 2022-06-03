@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="940.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SortingCharacterResultPageController">
+<AnchorPane prefHeight="600.0" prefWidth="940.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SortingCharacterResultPageController">
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
@@ -44,7 +44,7 @@
             <Blend />
          </effect>
       </ScrollPane>
-      <Label fx:id="RankingLabel" blendMode="EXCLUSION" layoutX="255.0" layoutY="59.0" style="-fx-background-color: ALICEBLUE; -fx-background-insets: 4;" text="Attribute's Ranking">
+      <Label fx:id="RankingLabel" layoutX="121.0" layoutY="11.0" prefHeight="96.0" prefWidth="247.0" style="-fx-background-insets: 4;" text="Attribute's Ranking" textFill="#fffb00" wrapText="true">
          <font>
             <Font name="Copperplate Gothic Bold" size="38.0" />
          </font>

@@ -46,11 +46,11 @@
                <font>
                   <Font name="Century" size="13.0" />
                </font></Label>
-            <Label layoutX="359.0" layoutY="13.0" text="Running speed(ms)" textFill="WHITE">
+            <Label layoutX="351.0" layoutY="13.0" text="Running speed(ms)" textFill="WHITE">
                <font>
                   <Font name="Century" size="13.0" />
                </font></Label>
-            <Label layoutX="498.0" layoutY="13.0" text="Walking pattern " textFill="WHITE">
+            <Label layoutX="482.0" layoutY="13.0" text="Walking pattern " textFill="WHITE">
                <font>
                   <Font name="Century" size="13.0" />
                </font></Label>
@@ -79,23 +79,26 @@
             <DropShadow />
          </effect>
       </ScrollPane>
-      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="60.0" layoutY="523.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sequence to be killed: " wrappingWidth="209.1956329345703">
+      <Text fill="YELLOW" fontSmoothingType="LCD" layoutX="47.0" layoutY="523.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sequence to be killed: " wrappingWidth="209.1956329345703">
          <font>
-            <Font name="Lucida Fax Regular" size="18.0" />
+            <Font name="Bauhaus 93" size="20.0" />
          </font>
       </Text>
-      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="60.0" layoutY="564.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total distance moved: " wrappingWidth="224.52894592285156">
+      <Text fill="YELLOW" fontSmoothingType="LCD" layoutX="47.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total distance moved: " wrappingWidth="209.1956329345703">
          <font>
-            <Font name="Lucida Fax Regular" size="18.0" />
+            <Font name="Bauhaus 93" size="20.0" />
          </font>
       </Text>
-      <Label fx:id="killingSequenceLabel" layoutX="266.0" layoutY="505.0" prefHeight="24.0" prefWidth="632.0" text="killingSequence" textFill="#fffd03">
+      <Label fx:id="killingSequenceLabel" blendMode="COLOR_BURN" layoutX="252.0" layoutY="504.0" prefHeight="24.0" prefWidth="632.0" style="-fx-background-color: ivory;" text="killingSequence">
          <font>
-            <Font name="Lucida Fax Regular" size="18.0" />
-         </font></Label>
-      <Label fx:id="distanceMovedLabel" layoutX="266.0" layoutY="545.0" text="distance moved" textFill="#fffd03">
+            <Font name="Berlin Sans FB Bold" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Label>
+      <Label fx:id="distanceMovedLabel" blendMode="COLOR_BURN" layoutX="252.0" layoutY="544.0" text="distance moved">
          <font>
-            <Font name="Lucida Fax Regular" size="18.0" />
+            <Font name="Berlin Sans FB Bold" size="18.0" />
          </font></Label>
    </children>
 </AnchorPane>

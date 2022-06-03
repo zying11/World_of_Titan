@@ -3,30 +3,61 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.BinarySearchCharacterPageController">
+<AnchorPane prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.BinarySearchCharacterPageController">
    <children>
-      <Button layoutX="796.0" layoutY="530.0" mnemonicParsing="false" onMouseClicked="#HomeButtonPressed" prefHeight="30.0" prefWidth="89.0" text="Home" />
-      <Label layoutX="329.0" layoutY="137.0" prefHeight="46.0" prefWidth="330.0" text="Binary Search">
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Image/AOT%20soldiers.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="796.0" layoutY="530.0" mnemonicParsing="false" onMouseClicked="#HomeButtonPressed" prefHeight="30.0" prefWidth="89.0" style="-fx-background-color: lightgreen; -fx-background-radius: 25;" text="Home">
          <font>
-            <Font size="41.0" />
+            <Font name="Imprint MT Shadow" size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Label layoutX="271.0" prefHeight="59.0" prefWidth="436.0" text="Binary Search" textFill="WHITE">
+         <font>
+            <Font name="Perpetua Titling MT Bold" size="48.0" />
          </font>
       </Label>
-      <Label layoutX="293.0" layoutY="221.0" text="Find your soldiers by using ability values">
+      <Label layoutX="247.0" layoutY="238.0" text="Find your soldiers by using ability values" textFill="#ffe500">
          <font>
-            <Font size="20.0" />
+            <Font name="Lucida Fax Demibold" size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="inputAttribute" layoutX="304.0" layoutY="300.0" promptText="Enter attribute" />
-      <TextField fx:id="inputAttributeValue" layoutX="453.0" layoutY="300.0" prefHeight="25.0" prefWidth="126.0" promptText="Enter attribute value" />
-      <Button layoutX="596.0" layoutY="300.0" mnemonicParsing="false" onAction="#SearchAttributeButtonPressed" text="Search" />
-      <Button layoutX="59.0" layoutY="530.0" mnemonicParsing="false" onAction="#BackToCharacterButtonPressed" prefHeight="30.0" prefWidth="89.0" text="Back" />
-      <Label fx:id="errorLabel" layoutX="311.0" layoutY="345.0" prefHeight="12.0" prefWidth="284.0" textFill="RED">
+      <TextField fx:id="inputAttribute" layoutX="271.0" layoutY="300.0" prefHeight="36.0" prefWidth="179.0" promptText="Enter attribute">
          <font>
-            <Font size="11.0" />
+            <Font name="Lucida Sans Typewriter Regular" size="11.0" />
+         </font></TextField>
+      <TextField fx:id="inputAttributeValue" layoutX="451.0" layoutY="300.0" prefHeight="36.0" prefWidth="153.0" promptText="Enter attribute value">
+         <font>
+            <Font name="Lucida Sans Typewriter Regular" size="11.0" />
+         </font></TextField>
+      <Button layoutX="614.0" layoutY="300.0" mnemonicParsing="false" onAction="#SearchAttributeButtonPressed" prefHeight="36.0" prefWidth="63.0" style="-fx-background-color: tomato;" text="Search">
+         <font>
+            <Font name="Lucida Sans Unicode" size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button layoutX="59.0" layoutY="530.0" mnemonicParsing="false" onAction="#BackToCharacterButtonPressed" prefHeight="30.0" prefWidth="89.0" style="-fx-background-color: lightblue; -fx-background-radius: 25;" text="Back">
+         <font>
+            <Font name="Imprint MT Shadow" size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Label fx:id="errorLabel" layoutX="271.0" layoutY="344.0" prefHeight="18.0" prefWidth="412.0" textFill="RED">
+         <font>
+            <Font name="Consolas" size="15.0" />
          </font>
       </Label>
    </children>
