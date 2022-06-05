@@ -47,12 +47,16 @@ public class SortingCharacterResultPageController {
     private Label RankingLabel;
 
     @FXML
+    private Label valueLabel;
+
+    @FXML
     void initialize() throws IOException {
 
         //result of height ranking
         if(SortingCharacterPageController.inputHeight){
             heightRanking.clear();
             RankingLabel.setText("Height Ranking");
+            valueLabel.setText("Value (cm)");
 
             for (CharacterData character : CharacterController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Height: " + character.getHeight());
@@ -78,6 +82,7 @@ public class SortingCharacterResultPageController {
         else if(SortingCharacterPageController.inputWeight){
             weightRanking.clear();
             RankingLabel.setText("Weight Ranking");
+            valueLabel.setText("Value (kg)");
 
             for (CharacterData character : CharacterController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Weight: " + character.getWeight());
