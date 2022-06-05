@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="940.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SortingCharacterPageController">
+<AnchorPane prefHeight="600.0" prefWidth="940.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.SortingCharacterPageController">
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
@@ -30,6 +30,9 @@
          <effect>
             <InnerShadow />
          </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button layoutX="59.0" layoutY="534.0" mnemonicParsing="false" onAction="#BackToCharacterButtonPressed" prefHeight="40.0" prefWidth="75.0" style="-fx-background-color: LIGHTBLUE; -fx-background-radius: 25;" text="Back">
          <font>
@@ -38,6 +41,9 @@
          <effect>
             <InnerShadow />
          </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Label layoutX="394.0" layoutY="421.0" prefHeight="100.0" prefWidth="151.0" style="-fx-background-color: CORNSILK; -fx-background-insets: 4; -fx-blend-mode: darken;" text="Search for your soldier based on their attributes " textAlignment="CENTER" wrapText="true">
          <font>
