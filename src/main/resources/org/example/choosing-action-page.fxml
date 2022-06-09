@@ -61,7 +61,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button layoutX="169.0" layoutY="300.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Weakest wall">
+      <Button layoutX="169.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#WeakestWallButtonPressed" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Weakest wall">
          <font>
             <Font name="Sylfaen" size="16.0" />
          </font>

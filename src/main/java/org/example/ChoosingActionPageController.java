@@ -6,9 +6,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+
 
 import java.io.IOException;
 import java.util.Objects;
@@ -53,6 +52,16 @@ public class ChoosingActionPageController {
     void MarleyWordButtonPressed(MouseEvent event) throws IOException{
         //forward to marley word converter page when word button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("marley-word-converter-page.fxml")));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void WeakestWallButtonPressed(MouseEvent event) throws IOException{
+        //forward to marley word converter page when word button pressed
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("weakest-wall-search-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
