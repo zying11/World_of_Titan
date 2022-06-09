@@ -30,7 +30,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button fx:id="btn2" layoutX="412.0" layoutY="371.0" mnemonicParsing="false" onMouseClicked="#BattleButtonPressed" prefHeight="68.0" prefWidth="108.0" stylesheets="@styling.css" text="Battle!">
+      <Button fx:id="btn2" layoutX="412.0" layoutY="371.0" mnemonicParsing="false" onMouseClicked="#BattleButtonPressed" prefHeight="68.0" prefWidth="108.0" stylesheets="@styling.css" text="Play">
          <font>
             <Font name="Georgia" size="25.0" />
          </font>

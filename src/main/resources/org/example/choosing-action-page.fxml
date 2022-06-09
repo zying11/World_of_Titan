@@ -51,7 +51,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button alignment="CENTER" layoutX="169.0" layoutY="242.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Word converter" textAlignment="CENTER" wrapText="true">
+      <Button alignment="CENTER" layoutX="169.0" layoutY="242.0" mnemonicParsing="false" onMouseClicked="#MarleyWordButtonPressed" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Word converter" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Sylfaen" size="16.0" />
          </font>

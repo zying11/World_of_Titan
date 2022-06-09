@@ -48,4 +48,14 @@ public class ChoosingActionPageController {
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
+    void MarleyWordButtonPressed(MouseEvent event) throws IOException{
+        //forward to marley word converter page when word button pressed
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("marley-word-converter-page.fxml")));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }
