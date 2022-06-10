@@ -49,6 +49,16 @@ public class ChoosingActionPageController {
     }
 
     @FXML
+    void PathFindingButtonPressed(MouseEvent event) throws IOException{
+        //forward to path finding action page when path finding button pressed
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("path-finding-action-page.fxml")));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     void MarleyWordButtonPressed(MouseEvent event) throws IOException{
         //forward to marley word converter page when word button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("marley-word-converter-page.fxml")));
@@ -60,7 +70,7 @@ public class ChoosingActionPageController {
 
     @FXML
     void WeakestWallButtonPressed(MouseEvent event) throws IOException{
-        //forward to marley word converter page when word button pressed
+        //forward to weakest wall search page when word weakest wall button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("weakest-wall-search-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

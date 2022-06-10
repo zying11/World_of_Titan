@@ -41,7 +41,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button layoutX="169.0" layoutY="183.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Path Finding">
+      <Button layoutX="169.0" layoutY="183.0" mnemonicParsing="false" onMouseClicked="#PathFindingButtonPressed" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Path Finding">
          <font>
             <Font name="Sylfaen" size="16.0" />
          </font>
