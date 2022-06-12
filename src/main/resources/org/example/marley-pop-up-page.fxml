@@ -2,22 +2,35 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="250.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MarleyPopUpController">
    <children>
-      <Label layoutX="192.0" layoutY="64.0" prefHeight="30.0" prefWidth="116.0" text="Translation">
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Image/AOT%20marley%20pop%20up.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="153.0" layoutY="27.0" prefHeight="30.0" prefWidth="176.0" text="Translation" textFill="WHITE">
          <font>
-            <Font size="20.0" />
+            <Font name="Engravers MT" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="translatedWord" layoutX="135.0" layoutY="115.0" prefHeight="17.0" prefWidth="231.0">
+      <Label fx:id="translatedWord" layoutX="79.0" layoutY="64.0" prefHeight="71.0" prefWidth="323.0" textFill="#12ff00" wrapText="true">
          <font>
-            <Font size="15.0" />
+            <Font name="OCR A Extended" size="15.0" />
          </font>
       </Label>
-      <Button layoutX="225.0" layoutY="174.0" mnemonicParsing="false" onAction="#OKButtonPressed" text="OK" />
+      <Button layoutX="220.0" layoutY="189.0" mnemonicParsing="false" onAction="#OKButtonPressed" style="-fx-background-color: LAVENDER;" text="OK">
+         <font>
+            <Font name="Constantia Bold" size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
    </children>
 </AnchorPane>
