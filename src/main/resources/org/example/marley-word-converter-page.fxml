@@ -3,19 +3,45 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MarleyWordConverterController">
+<AnchorPane prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MarleyWordConverterController">
    <children>
-      <Label layoutX="272.0" layoutY="176.0" text="Marley Word Converter">
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Image/AOT%20word%20converter.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="208.0" layoutY="179.0" text="Marley Word Converter" textFill="YELLOW">
          <font>
-            <Font size="36.0" />
+            <Font name="Showcard Gothic" size="40.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </Label>
-      <TextField layoutX="272.0" layoutY="284.0" prefHeight="33.0" prefWidth="248.0" promptText="Enter your word here" />
-      <Button layoutX="572.0" layoutY="284.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="66.0" text="Translate" />
-      <Button layoutX="97.0" layoutY="506.0" mnemonicParsing="false" onMouseClicked="#BackButtonPressed" prefHeight="33.0" prefWidth="59.0" text="Back" />
+      <TextField layoutX="272.0" layoutY="284.0" prefHeight="36.0" prefWidth="423.0" promptText="Enter your word here">
+         <font>
+            <Font name="Lucida Sans Typewriter Regular" size="12.0" />
+         </font></TextField>
+      <Button layoutX="439.0" layoutY="350.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="90.0" style="-fx-background-color: ROSYBROWN;" text="Translate">
+         <font>
+            <Font name="Lucida Sans Unicode" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button layoutX="97.0" layoutY="506.0" mnemonicParsing="false" onMouseClicked="#BackButtonPressed" prefHeight="37.0" prefWidth="71.0" style="-fx-background-color: lightblue; -fx-background-radius: 25;" text="Back">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Imprint MT Shadow" size="20.0" />
+         </font></Button>
    </children>
 </AnchorPane>
