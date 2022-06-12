@@ -52,7 +52,7 @@
          <effect>
             <DropShadow />
          </effect></TextArea>
-      <Label fx:id="errorLabel" layoutX="229.0" layoutY="334.0" prefHeight="18.0" prefWidth="407.0" textFill="RED">
+      <Label fx:id="errorLabel" layoutX="132.0" layoutY="333.0" prefHeight="18.0" prefWidth="407.0" textFill="RED">
          <font>
             <Font name="Consolas" size="13.0" />
          </font></Label>

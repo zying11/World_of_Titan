@@ -15,12 +15,12 @@
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Image/AOT%20characters%20sorting.jpg" />
+            <Image url="@../../Image/AOT%20character%20sorting.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="260.0" layoutY="133.0" style="-fx-background-radius: 13; -fx-background-insets: 4;" text="Character Sorting" textFill="#ffec00">
+      <Label layoutX="31.0" layoutY="22.0" style="-fx-background-radius: 13; -fx-background-insets: 4;" text="Character Sorting" textFill="#ffec00">
          <font>
-            <Font name="STHupo" size="56.0" />
+            <Font name="Britannic Bold" size="54.0" />
          </font>
          <effect>
             <DropShadow />
@@ -48,15 +48,15 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label layoutX="394.0" layoutY="421.0" prefHeight="100.0" prefWidth="151.0" style="-fx-background-color: CORNSILK; -fx-background-insets: 4; -fx-blend-mode: darken;" text="Search for your soldier based on their attributes " textAlignment="CENTER" wrapText="true">
+      <Label layoutX="497.0" layoutY="60.0" prefHeight="100.0" prefWidth="198.0" style="-fx-background-color: white; -fx-blend-mode: COLOR_burn;" text="Search for your soldiers based on their attributes " textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="Cooper Black" size="19.0" />
+            <Font name="Franklin Gothic Heavy" size="20.0" />
          </font>
          <effect>
             <DropShadow />
          </effect>
       </Label>
-      <Button layoutX="655.0" layoutY="320.0" mnemonicParsing="false" onAction="#SearchAttributeButtonPressed" prefHeight="40.0" style="-fx-background-color: INDIANRED;" text="SEARCH">
+      <Button layoutX="395.0" layoutY="90.0" mnemonicParsing="false" onAction="#SearchAttributeButtonPressed" prefHeight="40.0" style="-fx-background-color: pink;" text="SEARCH">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -67,11 +67,11 @@
             <InnerShadow />
          </effect>
       </Button>
-      <TextField fx:id="inputAttribute" layoutX="291.0" layoutY="320.0" prefHeight="40.0" prefWidth="358.0" promptText="Enter attribution">
+      <TextField fx:id="inputAttribute" layoutX="31.0" layoutY="90.0" prefHeight="40.0" prefWidth="358.0" promptText="Enter attribution">
          <font>
             <Font name="Lucida Sans Typewriter Regular" size="12.0" />
          </font></TextField>
-      <Label fx:id="errorLabel" layoutX="300.0" layoutY="360.0" prefHeight="28.0" prefWidth="358.0" textFill="RED">
+      <Label fx:id="errorLabel" layoutX="31.0" layoutY="130.0" prefHeight="28.0" prefWidth="358.0" textFill="RED">
          <font>
             <Font name="Consolas" size="15.0" />
          </font>
