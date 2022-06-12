@@ -3,27 +3,31 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ChoosingActionPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ChoosingActionPageController">
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Image/AOT%20choosing%20action.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="586.0" layoutY="23.0" prefHeight="205.0" prefWidth="189.0" text="Battle with Titans!" wrapText="true">
+      <Label layoutX="586.0" layoutY="23.0" prefHeight="205.0" prefWidth="189.0" text="Battle with Titans!" textFill="#ffc200" wrapText="true">
          <font>
             <Font name="Tw Cen MT" size="60.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </Label>
-      <Button layoutX="786.0" layoutY="59.0" mnemonicParsing="false" onMouseClicked="#HomeButtonPressed" prefHeight="43.0" prefWidth="74.0" style="-fx-background-color: POWDERBLUE; -fx-background-radius: 20;" text="HOME">
+      <Button layoutX="786.0" layoutY="59.0" mnemonicParsing="false" onMouseClicked="#HomeButtonPressed" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: POWDERBLUE; -fx-background-radius: 20;" text="HOME">
          <font>
-            <Font name="Sylfaen" size="16.0" />
+            <Font name="Imprint MT Shadow" size="16.0" />
          </font>
          <effect>
             <InnerShadow />
@@ -33,7 +37,7 @@
          </cursor></Button>
       <Button layoutX="169.0" layoutY="126.0" mnemonicParsing="false" onMouseClicked="#GenerateTitanButtonPressed" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Generate Titan" wrapText="true">
          <font>
-            <Font name="Sylfaen" size="16.0" />
+            <Font name="Centaur" size="18.0" />
          </font>
          <effect>
             <InnerShadow />
@@ -43,7 +47,7 @@
          </cursor></Button>
       <Button layoutX="169.0" layoutY="183.0" mnemonicParsing="false" onMouseClicked="#PathFindingButtonPressed" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Path Finding">
          <font>
-            <Font name="Sylfaen" size="16.0" />
+            <Font name="Centaur" size="18.0" />
          </font>
          <effect>
             <InnerShadow />
@@ -53,7 +57,7 @@
          </cursor></Button>
       <Button alignment="CENTER" layoutX="169.0" layoutY="242.0" mnemonicParsing="false" onMouseClicked="#MarleyWordButtonPressed" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Word converter" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="Sylfaen" size="16.0" />
+            <Font name="Centaur" size="18.0" />
          </font>
          <effect>
             <InnerShadow />
@@ -63,7 +67,7 @@
          </cursor></Button>
       <Button layoutX="169.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#WeakestWallButtonPressed" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: PALEGOLDENROD;" text="Weakest wall">
          <font>
-            <Font name="Sylfaen" size="16.0" />
+            <Font name="Centaur" size="18.0" />
          </font>
          <effect>
             <InnerShadow />
