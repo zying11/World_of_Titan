@@ -14,10 +14,10 @@
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Image/AOT%20word%20converter.jpg" />
+            <Image url="@../../Image/AOT%20marley%20word%20converter.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="208.0" layoutY="179.0" text="Marley Word Converter" textFill="YELLOW">
+      <Label layoutX="17.0" layoutY="132.0" prefHeight="187.0" prefWidth="231.0" text="Marley Word Converter" textFill="YELLOW" wrapText="true">
          <font>
             <Font name="Showcard Gothic" size="40.0" />
          </font>
@@ -25,11 +25,11 @@
             <DropShadow />
          </effect>
       </Label>
-      <TextField fx:id="inputWord" layoutX="272.0" layoutY="284.0" prefHeight="36.0" prefWidth="423.0" promptText="Enter your word here">
+      <TextField fx:id="inputWord" layoutX="258.0" layoutY="319.0" prefHeight="36.0" prefWidth="423.0" promptText="Enter your word here">
          <font>
             <Font name="Lucida Sans Typewriter Regular" size="12.0" />
          </font></TextField>
-      <Button layoutX="439.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#TranslateButtonPressed" prefHeight="36.0" prefWidth="90.0" style="-fx-background-color: ROSYBROWN;" text="Translate">
+      <Button layoutX="425.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#TranslateButtonPressed" prefHeight="36.0" prefWidth="90.0" style="-fx-background-color: ROSYBROWN;" text="Translate">
          <font>
             <Font name="Lucida Sans Unicode" size="15.0" />
          </font>
@@ -43,9 +43,9 @@
          <font>
             <Font name="Imprint MT Shadow" size="20.0" />
          </font></Button>
-      <Label fx:id="errorLabel" layoutX="395.0" layoutY="332.0" prefHeight="36.0" prefWidth="178.0" textFill="RED">
+      <Label fx:id="errorLabel" layoutX="381.0" layoutY="362.0" prefHeight="36.0" prefWidth="178.0" textFill="RED">
          <font>
-            <Font size="13.0" />
+            <Font name="Consolas" size="13.0" />
          </font>
       </Label>
    </children>
