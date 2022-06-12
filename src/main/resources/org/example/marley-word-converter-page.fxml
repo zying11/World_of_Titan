@@ -6,16 +6,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MarleyWordConverterController">
+<AnchorPane prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MarleyWordConverterController">
    <children>
+      <Label fx:id="errorLabel" layoutX="294.0" layoutY="320.0" prefHeight="21.0" prefWidth="330.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
       <Label layoutX="272.0" layoutY="176.0" text="Marley Word Converter">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <TextField layoutX="272.0" layoutY="284.0" prefHeight="33.0" prefWidth="248.0" promptText="Enter your word here" />
-      <Button layoutX="572.0" layoutY="284.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="66.0" text="Translate" />
+      <TextField fx:id="inputWord" layoutX="272.0" layoutY="267.0" prefHeight="33.0" prefWidth="373.0" promptText="Enter your word here" />
+      <Button layoutX="426.0" layoutY="363.0" mnemonicParsing="false" onMouseClicked="#TranslateButtonPressed" prefHeight="33.0" prefWidth="66.0" text="Translate" />
       <Button layoutX="97.0" layoutY="506.0" mnemonicParsing="false" onMouseClicked="#BackButtonPressed" prefHeight="33.0" prefWidth="59.0" text="Back" />
    </children>
 </AnchorPane>
