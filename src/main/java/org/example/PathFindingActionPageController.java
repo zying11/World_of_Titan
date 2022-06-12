@@ -38,6 +38,16 @@ public class PathFindingActionPageController {
     }
 
     @FXML
+    void FindBestPathButtonPressed(MouseEvent event) throws IOException {
+        //forward to path finding search page when find path button pressed
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("best-path-search-page.fxml")));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     void BackButtonPressed(MouseEvent event) throws IOException {
         //forward to choosing action page when home button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("choosing-action-page.fxml")));

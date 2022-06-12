@@ -150,8 +150,8 @@ public class PathFindingSearchPageController {
 
     @FXML
     void BackButtonPressed(MouseEvent event) throws IOException {
-        //forward to choosing action page when home button pressed
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("choosing-action-page.fxml")));
+        //forward to path finding action page when back button pressed
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("path-finding-action-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
