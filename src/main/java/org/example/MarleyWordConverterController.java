@@ -82,6 +82,9 @@ public class MarleyWordConverterController {
 
     @FXML
     void TranslateButtonPressed(MouseEvent event) throws IOException {
+        errorLabel.setText("");
+        indicator=false;
+        parenthesesChecking=false;
 
         if(inputWord.getText().isEmpty()){
             System.out.println("Please do not leave text field empty!");
