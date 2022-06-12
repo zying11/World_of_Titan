@@ -9,14 +9,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="250.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.BinarySearchResultController">
+<AnchorPane prefHeight="250.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.BinarySearchResultController">
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Image/AOT%20binary%20search%20result.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="outputNames" layoutX="166.0" layoutY="134.0" prefHeight="19.0" prefWidth="326.0" text="the soldier name" textFill="#fffb00">
+      <Label fx:id="outputNames" layoutX="166.0" layoutY="134.0" prefHeight="19.0" prefWidth="326.0" textFill="#fffb00">
          <font>
             <Font name="Constantia Bold" size="15.0" />
          </font></Label>
@@ -44,11 +44,11 @@
             <InnerShadow />
          </effect>
       </Label>
-      <Label fx:id="outputAbility" layoutX="166.0" layoutY="47.0" prefHeight="17.0" prefWidth="168.0" text="the ability" textFill="#fffb00">
+      <Label fx:id="outputAbility" layoutX="166.0" layoutY="47.0" prefHeight="17.0" prefWidth="168.0" textFill="#fffb00">
          <font>
             <Font name="Constantia Bold" size="15.0" />
          </font></Label>
-      <Label fx:id="outputAbilityValue" layoutX="166.0" layoutY="91.0" prefHeight="17.0" prefWidth="146.0" text="the value" textFill="#fffb00">
+      <Label fx:id="outputAbilityValue" layoutX="166.0" layoutY="91.0" prefHeight="17.0" prefWidth="146.0" textFill="#fffb00">
          <font>
             <Font name="Constantia Bold" size="15.0" />
          </font></Label>

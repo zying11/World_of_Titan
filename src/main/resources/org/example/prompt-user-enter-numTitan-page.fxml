@@ -4,34 +4,34 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PromptUserEnterNumTitanPageController">
+<AnchorPane prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PromptUserEnterNumTitanPageController">
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Image/AOT%20titan.png" />
+            <Image url="@../../Image/AOT%20titan.jpg" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" blendMode="DIFFERENCE" layoutX="248.0" layoutY="256.0" prefHeight="43.0" prefWidth="440.0" style="-fx-background-color: PEACHPUFF;" text="Enter number of Titan to be generated " textFill="#4c3b3b">
+      <Label alignment="CENTER" layoutX="17.0" layoutY="45.0" prefHeight="185.0" prefWidth="270.0" text="Enter number of Titan to be generated " textAlignment="CENTER" textFill="#fbff00" wrapText="true">
          <font>
-            <Font name="Bodoni MT Black" size="22.0" />
+            <Font name="Maiandra GD" size="40.0" />
          </font>
          <effect>
-            <Glow />
+            <DropShadow />
          </effect></Label>
-      <TextField fx:id="numOfTitanGenerate" layoutX="347.0" layoutY="317.0" prefHeight="35.0" prefWidth="215.0">
+      <TextField fx:id="numOfTitanGenerate" layoutX="35.0" layoutY="245.0" prefHeight="35.0" prefWidth="193.0">
          <font>
-            <Font name="Goudy Stout" size="14.0" />
+            <Font name="Lucida Sans Typewriter Regular" size="14.0" />
          </font></TextField>
-      <Button layoutX="571.0" layoutY="317.0" mnemonicParsing="false" onAction="#GoGenerateTitanButtonPressed" prefHeight="35.0" prefWidth="57.0" style="-fx-background-color: YELLOWGREEN;" text="GO">
+      <Button layoutX="108.0" layoutY="300.0" mnemonicParsing="false" onAction="#GoGenerateTitanButtonPressed" prefHeight="26.0" prefWidth="47.0" style="-fx-background-color: YELLOWGREEN;" text="GO">
          <font>
-            <Font name="Book Antiqua Bold" size="18.0" />
+            <Font name="Imprint MT Shadow" size="14.0" />
          </font>
          <effect>
             <InnerShadow />
@@ -39,7 +39,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Label fx:id="errorLabel" layoutX="347.0" layoutY="360.0" prefHeight="18.0" prefWidth="249.0" textFill="RED">
+      <Label fx:id="errorLabel" layoutX="27.0" layoutY="281.0" prefHeight="18.0" prefWidth="249.0" textFill="RED">
          <font>
             <Font name="Consolas" size="14.0" />
          </font></Label>
