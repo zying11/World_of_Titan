@@ -19,9 +19,9 @@
             <Image url="@../../Image/AOT%20path%20finding%20action.jpg" />
          </image>
       </ImageView>
-      <Text fill="#ff9f73" layoutX="38.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To notice all titans' position..." wrappingWidth="231.3942108154297">
+      <Text fill="#be1a1a" layoutX="45.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To notice all titans' position..." textAlignment="CENTER" wrappingWidth="231.3942108154297">
          <font>
-            <Font name="Gill Sans Ultra Bold" size="31.0" />
+            <Font name="Juice ITC" size="54.0" />
          </font>
          <effect>
             <DropShadow />

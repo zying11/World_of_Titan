@@ -4,30 +4,62 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.BestPathSearchPageController">
+<AnchorPane prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.BestPathSearchPageController">
    <children>
-      <Text layoutX="248.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Find out best path to kill titan">
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Image/AOT%20fighting%20titans.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="464.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Find out the best path to kill titans" wrappingWidth="450.3275146484375">
          <font>
-            <Font size="34.0" />
+            <Font name="Niagara Engraved" size="55.0" />
          </font>
       </Text>
-      <TextField fx:id="locationOfTitan" layoutX="278.0" layoutY="300.0" prefHeight="54.0" prefWidth="306.0" promptText="Enter location of titan (1-15)" />
-      <Button layoutX="584.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#GoFindBestPathButtonPressed" prefHeight="54.0" prefWidth="64.0" text="Go">
+      <TextField fx:id="locationOfTitan" layoutX="278.0" layoutY="313.0" prefHeight="41.0" prefWidth="306.0" promptText="Enter location of titan (1-15)">
+         <font>
+            <Font name="Lucida Sans Typewriter Regular" size="13.0" />
+         </font></TextField>
+      <Button layoutX="584.0" layoutY="313.0" mnemonicParsing="false" onMouseClicked="#GoFindBestPathButtonPressed" prefHeight="41.0" prefWidth="64.0" style="-fx-background-color: GREENYELLOW;" text="GO">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <font>
+            <Font name="Imprint MT Shadow" size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
       </Button>
-      <Text layoutX="409.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="( you are at location 0 )" />
-      <Label fx:id="errorLabel" layoutX="278.0" layoutY="356.0" prefHeight="18.0" prefWidth="372.0" textFill="RED" />
-      <Button layoutX="55.0" layoutY="528.0" mnemonicParsing="false" onMouseClicked="#BackButtonPressed" text="Back">
+      <Text fill="#ffe100" layoutX="396.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="( you are at location 0 )">
+         <font>
+            <Font name="Kristen ITC" size="13.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Text>
+      <Label fx:id="errorLabel" layoutX="278.0" layoutY="356.0" prefHeight="18.0" prefWidth="372.0" textFill="RED">
+         <font>
+            <Font name="Consolas" size="13.0" />
+         </font></Label>
+      <Button layoutX="55.0" layoutY="528.0" mnemonicParsing="false" onMouseClicked="#BackButtonPressed" style="-fx-background-color: lightblue; -fx-background-radius: 25;" text="Back">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <font>
+            <Font name="Imprint MT Shadow" size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
       </Button>
    </children>
 </AnchorPane>
