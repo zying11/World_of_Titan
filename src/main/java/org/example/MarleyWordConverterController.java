@@ -126,21 +126,25 @@ public class MarleyWordConverterController {
             int cnt = 0;
 
             for (int i = 0; i < inputWord.getText().length(); i++) {
+                if (cnt < 0) {
+                    break;
 
-                if (inputWord.getText().charAt(i) == '(') {
-                    cnt++;
-                }
-                if (inputWord.getText().charAt(i) == ')') {
-                    cnt--;
+                } else {
+                    if (inputWord.getText().charAt(i) == '(')
+                        cnt++;
+                    if (inputWord.getText().charAt(i) == ')')
+                        cnt--;
                 }
             }
-            if (cnt == 0) {
+            if(cnt==0){
                 indicator = true;
-            } else {
+            }
+            else{
                 indicator = false;
                 System.out.println("There is a grammar mistake!");
                 errorLabel.setText("There is a grammar mistake!");
             }
+
         }
 
 
