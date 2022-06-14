@@ -58,7 +58,7 @@ public class SortingCharacterResultPageController {
             RankingLabel.setText("Height Ranking");
             valueLabel.setText("Value (cm)");
 
-            for (CharacterData character : CharacterController.list) {
+            for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Height: " + character.getHeight());
                 heightRanking.add(new CharacterData(character.getName(), character.getHeight()));
             }
@@ -84,7 +84,7 @@ public class SortingCharacterResultPageController {
             RankingLabel.setText("Weight Ranking");
             valueLabel.setText("Value (kg)");
 
-            for (CharacterData character : CharacterController.list) {
+            for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Weight: " + character.getWeight());
                 weightRanking.add(new CharacterData(character.getName(), character.getWeight()));
             }
@@ -109,7 +109,7 @@ public class SortingCharacterResultPageController {
             strengthRanking.clear();
             RankingLabel.setText("Strength Ranking");
 
-            for (CharacterData character : CharacterController.list) {
+            for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Strength: " + character.getStrength());
                 strengthRanking.add(new CharacterData(character.getName(), character.getStrength()));
             }
@@ -134,7 +134,7 @@ public class SortingCharacterResultPageController {
             agilityRanking.clear();
             RankingLabel.setText("Agility Ranking");
 
-            for (CharacterData character : CharacterController.list) {
+            for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Agility: " + character.getAgility());
                 agilityRanking.add(new CharacterData(character.getName(), character.getAgility()));
             }
@@ -159,7 +159,7 @@ public class SortingCharacterResultPageController {
             intelligenceRanking.clear();
             RankingLabel.setText("Intelligence Ranking");
 
-            for (CharacterData character : CharacterController.list) {
+            for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Intelligence: " + character.getIntelligence());
                 intelligenceRanking.add(new CharacterData(character.getName(), character.getIntelligence()));
             }
@@ -183,7 +183,7 @@ public class SortingCharacterResultPageController {
         else if(SortingCharacterPageController.inputCoordination){
             coordinationRanking.clear();
             RankingLabel.setText("Coordination Ranking");
-            for (CharacterData character : CharacterController.list) {
+            for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Coordination: " + character.getCoordination());
                 coordinationRanking.add(new CharacterData(character.getName(), character.getCoordination()));
             }
@@ -208,7 +208,7 @@ public class SortingCharacterResultPageController {
             leadershipRanking.clear();
             RankingLabel.setText("Leadership Ranking");
 
-            for (CharacterData character : CharacterController.list) {
+            for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Leadership: " + character.getLeadership());
                 leadershipRanking.add(new CharacterData(character.getName(), character.getLeadership()));
             }

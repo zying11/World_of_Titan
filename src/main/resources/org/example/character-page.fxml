@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.CharacterController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.CharacterController">
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
@@ -40,15 +40,14 @@
       <ButtonBar layoutX="60.0" layoutY="102.0" prefHeight="40.0" prefWidth="200.0" />
       <TableView fx:id="table" blendMode="HARD_LIGHT" layoutX="54.0" layoutY="113.0" prefHeight="364.0" prefWidth="844.0" style="-fx-background-color: AZURE;">
         <columns>
-          <TableColumn fx:id="img" prefWidth="155.19997787475586" text="Image" />
-          <TableColumn fx:id="name" prefWidth="128.00001525878906" text="Name" />
-            <TableColumn fx:id="height" prefWidth="58.40008544921875" text="Height" />
-            <TableColumn fx:id="weight" prefWidth="63.199951171875" text="Weight" />
-            <TableColumn fx:id="strength" prefWidth="76.800048828125" text="Strength" />
-            <TableColumn fx:id="agility" prefWidth="70.39996337890625" text="Agility" />
-            <TableColumn fx:id="intelligence" prefWidth="90.39996337890625" text="Intelligence" />
-            <TableColumn fx:id="coordination" prefWidth="99.2000732421875" text="Coordination" />
-            <TableColumn fx:id="leadership" prefWidth="116.800048828125" text="Leadership" />
+          <TableColumn fx:id="name" prefWidth="195.20000457763672" text="Name" />
+            <TableColumn fx:id="height" prefWidth="88.0" text="Height" />
+            <TableColumn fx:id="weight" prefWidth="77.5999755859375" text="Weight" />
+            <TableColumn fx:id="strength" prefWidth="85.5999755859375" text="Strength" />
+            <TableColumn fx:id="agility" prefWidth="79.20004272460938" text="Agility" />
+            <TableColumn fx:id="intelligence" prefWidth="105.5999755859375" text="Intelligence" />
+            <TableColumn fx:id="coordination" prefWidth="111.199951171875" text="Coordination" />
+            <TableColumn fx:id="leadership" prefWidth="100.0" text="Leadership" />
         </columns>
          <effect>
             <InnerShadow />

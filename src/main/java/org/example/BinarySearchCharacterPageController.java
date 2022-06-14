@@ -93,9 +93,9 @@ public class BinarySearchCharacterPageController {
 
             nameSort.clear();
             heightSort.clear();
-            Collections.sort(CharacterController.list, new HeightComparator());
+            Collections.sort(MainHomePageController.list, new HeightComparator());
 
-            for (CharacterData character : CharacterController.list) {
+            for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Height: " + character.getHeight());
                 nameSort.add(character.getName());
                 heightSort.add(Integer.valueOf(character.getHeight()));
@@ -110,9 +110,9 @@ public class BinarySearchCharacterPageController {
 
             nameSort.clear();
             weightSort.clear();
-            Collections.sort(CharacterController.list, new WeightComparator());
+            Collections.sort(MainHomePageController.list, new WeightComparator());
 
-            for (CharacterData character : CharacterController.list) {
+            for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Weight: " + character.getWeight());
                 nameSort.add(character.getName());
                 weightSort.add(Integer.valueOf(character.getWeight()));
@@ -127,9 +127,9 @@ public class BinarySearchCharacterPageController {
 
             nameSort.clear();
             strengthSort.clear();
-            Collections.sort(CharacterController.list, new StrengthComparator());
+            Collections.sort(MainHomePageController.list, new StrengthComparator());
 
-            for (CharacterData character : CharacterController.list) {
+            for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Strength: " + character.getStrength());
                 nameSort.add(character.getName());
                 strengthSort.add(Integer.valueOf(character.getStrength()));
@@ -144,9 +144,9 @@ public class BinarySearchCharacterPageController {
 
             nameSort.clear();
             agilitySort.clear();
-            Collections.sort(CharacterController.list, new AgilityComparator());
+            Collections.sort(MainHomePageController.list, new AgilityComparator());
 
-            for (CharacterData character : CharacterController.list) {
+            for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Agility: " + character.getAgility());
                 nameSort.add(character.getName());
                 agilitySort.add(Integer.valueOf(character.getAgility()));
@@ -161,9 +161,9 @@ public class BinarySearchCharacterPageController {
 
             nameSort.clear();
             intelligenceSort.clear();
-            Collections.sort(CharacterController.list, new IntelligenceComparator());
+            Collections.sort(MainHomePageController.list, new IntelligenceComparator());
 
-            for (CharacterData character : CharacterController.list) {
+            for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Intelligence: " + character.getIntelligence());
                 nameSort.add(character.getName());
                 intelligenceSort.add(Integer.valueOf(character.getIntelligence()));
@@ -178,9 +178,9 @@ public class BinarySearchCharacterPageController {
 
             nameSort.clear();
             coordinationSort.clear();
-            Collections.sort(CharacterController.list, new CoordinationComparator());
+            Collections.sort(MainHomePageController.list, new CoordinationComparator());
 
-            for (CharacterData character : CharacterController.list) {
+            for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Coordination: " + character.getCoordination());
                 nameSort.add(character.getName());
                 coordinationSort.add(Integer.valueOf(character.getCoordination()));
@@ -195,9 +195,9 @@ public class BinarySearchCharacterPageController {
 
             nameSort.clear();
             leadershipSort.clear();
-            Collections.sort(CharacterController.list, new LeadershipComparator());
+            Collections.sort(MainHomePageController.list, new LeadershipComparator());
 
-            for (CharacterData character : CharacterController.list) {
+            for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Leadership: " + character.getLeadership());
                 nameSort.add(character.getName());
                 leadershipSort.add(Integer.valueOf(character.getLeadership()));

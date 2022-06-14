@@ -61,31 +61,31 @@ public class SortingCharacterPageController {
         //if input is in the scope of attribution
         else if (inputAttribute.getText().equalsIgnoreCase("height")) {
             inputHeight=true;
-            Collections.sort(CharacterController.list, new HeightComparator());
+            Collections.sort(MainHomePageController.list, new HeightComparator());
         }
         else if(inputAttribute.getText().equalsIgnoreCase("weight")){
             inputWeight=true;
-            Collections.sort(CharacterController.list, new WeightComparator());
+            Collections.sort(MainHomePageController.list, new WeightComparator());
         }
         else if(inputAttribute.getText().equalsIgnoreCase("strength")){
             inputStrength=true;
-            Collections.sort(CharacterController.list,new StrengthComparator() );
+            Collections.sort(MainHomePageController.list,new StrengthComparator() );
         }
         else if(inputAttribute.getText().equalsIgnoreCase("agility")){
             inputAgility=true;
-            Collections.sort(CharacterController.list,new AgilityComparator());
+            Collections.sort(MainHomePageController.list,new AgilityComparator());
         }
         else if(inputAttribute.getText().equalsIgnoreCase("intelligence")){
             inputIntelligence=true;
-            Collections.sort(CharacterController.list,new IntelligenceComparator());
+            Collections.sort(MainHomePageController.list,new IntelligenceComparator());
         }
         else if(inputAttribute.getText().equalsIgnoreCase("coordination")){
             inputCoordination=true;
-            Collections.sort(CharacterController.list,new CoordinationComparator());
+            Collections.sort(MainHomePageController.list,new CoordinationComparator());
         }
         else if(inputAttribute.getText().equalsIgnoreCase("leadership")){
             inputLeadership=true;
-            Collections.sort(CharacterController.list,new LeadershipComparator());
+            Collections.sort(MainHomePageController.list,new LeadershipComparator());
         }
         //if input is out of scope of the attribution
         else{
