@@ -5,7 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -34,19 +33,7 @@ public class GenerateTitanResultPageController {
     private VBox vBoxTitan;
 
     @FXML
-    private Label killingSequenceLabel;
-
-    @FXML
-    private Label distanceMovedLabel;
-
-    @FXML
     void initialize() throws IOException {
-        int previousPosition=0,currentPosition=0;
-        int totalDistanceMoved=0;
-        int count=0;
-        String outputKillingSequence="";
-        String title="Titan ";
-        String arrow=" --> ";
 
         for (TitanData titanData : GenerateTitanLoadingPageController.titanToKilledList) {
             try {
@@ -56,37 +43,20 @@ public class GenerateTitanResultPageController {
                 resultTemplateController.setTitanData(titanData);
                 vBoxTitan.getChildren().add(anchorPane);
 
-                // if count is at the last index of the killing list, skip for "-->" arrow
-                if(count<GenerateTitanLoadingPageController.titanToKilledList.size()-1){
-                    outputKillingSequence = outputKillingSequence + title + titanData.getIndex() + arrow;
-                    count++;
-                }
-                else{
-                    outputKillingSequence = outputKillingSequence + title + titanData.getIndex();
-                }
-
-                // calculate the distance moved from soldier to kill titan
-                currentPosition=titanData.getIndex();
-                if(currentPosition>previousPosition){
-                    totalDistanceMoved=totalDistanceMoved+(currentPosition-previousPosition);
-                    previousPosition=currentPosition;
-                }
-                else{
-                    totalDistanceMoved=totalDistanceMoved-(currentPosition-previousPosition);
-                    previousPosition=currentPosition;
-                }
-
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
+    }
 
-        System.out.print("Sequence to be killed: ");
-        System.out.println(outputKillingSequence);
-        killingSequenceLabel.setText(outputKillingSequence);
-
-        System.out.print("Total distance moved: "+totalDistanceMoved);
-        distanceMovedLabel.setText(String.valueOf(totalDistanceMoved));
+    @FXML
+    void KillingSequenceButtonPressed(MouseEvent event) throws IOException{
+        //forward to Killing Sequence Action Page when killing sequence button pressed
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("killing-sequence-action-page.fxml")));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
