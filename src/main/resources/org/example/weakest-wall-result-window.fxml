@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.WeakestWallResultWindowController">
+<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.WeakestWallResultWindowController">
    <children>
       <ImageView layoutX="-8.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -20,7 +20,7 @@
             <DropShadow />
          </effect>
       </ImageView>
-      <Label layoutX="33.0" layoutY="123.0" text="The weakest part of the wall is at position :" textFill="WHITE">
+      <Label layoutX="81.0" layoutY="14.0" prefHeight="166.0" prefWidth="150.0" text="The weakest part of the wall is at position :" textFill="WHITE" wrapText="true">
          <font>
             <Font name="Berlin Sans FB" size="30.0" />
          </font>
@@ -28,12 +28,15 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label fx:id="position" layoutX="269.0" layoutY="188.0" prefHeight="27.0" prefWidth="46.0" textFill="#fff200">
+      <Label fx:id="position" layoutX="208.0" layoutY="144.0" prefHeight="27.0" prefWidth="46.0" textFill="#fff200">
          <font>
             <Font name="Bodoni MT Black" size="30.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </Label>
-      <Button layoutX="276.0" layoutY="273.0" mnemonicParsing="false" onAction="#OKButtonPressed" style="-fx-background-color: LIGHTSTEELBLUE;" text="OK">
+      <Button layoutX="270.0" layoutY="275.0" mnemonicParsing="false" onAction="#OKButtonPressed" style="-fx-background-color: LIGHTSTEELBLUE;" text="OK">
          <font>
             <Font name="Constantia Bold" size="15.0" />
          </font>
