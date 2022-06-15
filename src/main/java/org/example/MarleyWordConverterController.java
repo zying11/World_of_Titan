@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Objects;
+import java.util.Random;
 
 public class MarleyWordConverterController {
 
@@ -32,12 +33,15 @@ public class MarleyWordConverterController {
     private Parent root;
 
     @FXML
-    private TextField inputWord;
+    private TextField input;
 
     @FXML
     private Label errorLabel;
 
     static MyHashMap map = new MyHashMap();
+    static MyHashMap encryptMap = new MyHashMap();
+    static MyHashMap decryptMap = new MyHashMap();
+
     static String translation;
 
     //to catch empty text field
@@ -46,6 +50,9 @@ public class MarleyWordConverterController {
     boolean indicator;
     //to check validation of parentheses
     boolean parenthesesChecking;
+    //for cipher
+    static String encryptedWord;
+    static String decryptedWord;
 
     @FXML
     void initialize() throws IOException {
@@ -78,32 +85,76 @@ public class MarleyWordConverterController {
         map.put('z', 'r');
         map.put('$', ' ');
 
+        //cipher
+        Random g = new Random();
+        //to avoid duplicate values
+        boolean[] duplicate = new boolean[26];
+
+        //encrypt a-z
+        for (int i = 0; i < 26; i++) {
+            //generate random ascii code of a-z
+            int k = g.nextInt(26) + 97;
+            if(duplicate[k-97]==false) {
+                duplicate[k-97] = true;
+                encryptMap.put((char) (i + 97), (char) (k));
+                decryptMap.put((char) (k), (char) (i + 97));
+            }
+            else
+                i--;
+        }
+
+        //encrypt A-Z
+        //to avoid duplicate values
+        boolean[] duplicate2 = new boolean[26];
+        for (int i = 0; i < 26; i++) {
+            //generate random ascii code of A-Z
+            int k = g.nextInt(26) + 65;
+            if(duplicate2[k-65]==false) {
+                duplicate2[k-65] = true;
+                encryptMap.put((char) (i + 65), (char) (k));
+                decryptMap.put((char) (k), (char) (i + 65));
+            }
+            else
+                i--;
+        }
+
+        //encrypt space and comma
+        encryptMap.put(' ', '1');
+        decryptMap.put('1',' ');
+
+        encryptMap.put(',', '2');
+        decryptMap.put('2',',');
+
+        System.out.println(input.getText());
+
+
     }
+
 
     @FXML
     void TranslateButtonPressed(MouseEvent event) throws IOException {
-        errorLabel.setText("");
-        indicator=false;
-        parenthesesChecking=false;
 
-        if(inputWord.getText().isEmpty()){
+        errorLabel.setText("");
+        indicator = false;
+        parenthesesChecking = false;
+
+        if (input.getText().isEmpty()) {
             System.out.println("Please do not leave text field empty!");
             errorLabel.setText("Please do not leave text field empty!");
             isEmpty = true;
-        }
-        else
+        } else
             isEmpty = false;
 
 
-        if(!isEmpty) {
+        if (!isEmpty) {
             //catch invalid char input with ASCII
-            for (int i = 0; i < inputWord.getText().length(); i++) {
-                if (!((inputWord.getText().charAt(i) >= 97 && inputWord.getText().charAt(i) <= 122) ||
-                        inputWord.getText().charAt(i) == 94 ||
-                        inputWord.getText().charAt(i) == 36 ||
-                        inputWord.getText().charAt(i) == 44 ||
-                        inputWord.getText().charAt(i) == 40 ||
-                        inputWord.getText().charAt(i) == 41)
+            for (int i = 0; i < input.getText().length(); i++) {
+                if (!((input.getText().charAt(i) >= 97 && input.getText().charAt(i) <= 122) ||
+                        input.getText().charAt(i) == 94 ||
+                        input.getText().charAt(i) == 36 ||
+                        input.getText().charAt(i) == 44 ||
+                        input.getText().charAt(i) == 40 ||
+                        input.getText().charAt(i) == 41)
                 ) {
                     indicator = false;
                     parenthesesChecking = false;
@@ -121,25 +172,24 @@ public class MarleyWordConverterController {
         }
 
         //to check validation of parentheses
-        if(parenthesesChecking) {
+        if (parenthesesChecking) {
 
             int cnt = 0;
 
-            for (int i = 0; i < inputWord.getText().length(); i++) {
+            for (int i = 0; i < input.getText().length(); i++) {
                 if (cnt < 0) {
                     break;
 
                 } else {
-                    if (inputWord.getText().charAt(i) == '(')
+                    if (input.getText().charAt(i) == '(')
                         cnt++;
-                    if (inputWord.getText().charAt(i) == ')')
+                    if (input.getText().charAt(i) == ')')
                         cnt--;
                 }
             }
-            if(cnt==0){
+            if (cnt == 0) {
                 indicator = true;
-            }
-            else{
+            } else {
                 indicator = false;
                 System.out.println("There is a grammar mistake!");
                 errorLabel.setText("There is a grammar mistake!");
@@ -150,7 +200,7 @@ public class MarleyWordConverterController {
 
         if (indicator) {
 
-            translation = WordConverter(inputWord.getText());
+            translation = WordConverter(input.getText());
 
             //grammar in Marley Word
             for (int i = 0; i < translation.length(); i++) {
@@ -175,24 +225,40 @@ public class MarleyWordConverterController {
                 }
 
             }
-            System.out.println(translation);
 
-            //forward to marley pop up window
-            Stage stage = new Stage();
-            Parent root;
-            stage.setTitle("Translation Window");
+            //cipher
+            encryptedWord = cipher(translation,encryptMap);
 
-            root = FXMLLoader.load((getClass().getResource("marley-pop-up-page.fxml")));
-            stage.setScene(new Scene(root));
-            stage.setResizable(false);
+            System.out.println("The word is encrypted!!");
+            System.out.println(encryptedWord);
 
-            //code for popup window
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.initOwner(inputWord.getScene().getWindow());
-            stage.showAndWait();
+
+            decryptedWord = cipher(encryptedWord,decryptMap);
+
+
+
 
         }
+
+
+       //forward to marley pop up window
+        Stage stage = new Stage();
+        Parent root;
+        stage.setTitle("Decryption");
+
+        root = FXMLLoader.load((getClass().getResource("marley-word-encryption-page.fxml")));
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
+
+        //code for popup window
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.initOwner(input.getScene().getWindow());
+        stage.showAndWait();
+
     }
+
+
+
 
 
     //translation method with recursion
@@ -219,6 +285,23 @@ public class MarleyWordConverterController {
         } else {
             return str.charAt(str.length() - 1) + reverse(str.substring(0, str.length() - 1));
         }
+    }
+
+    //encryption and decryption method
+    static String cipher(String str, MyHashMap map) {
+        String temp;
+        if (str.length() == 0) {
+            return "";
+        } else {
+            if (map.get(str.charAt(str.length() - 1)) > 0)
+                temp = map.get(str.charAt(str.length() - 1)) + "";
+            else
+                temp = str.charAt(str.length() - 1) + "";
+
+            return cipher(str.substring(0, str.length() - 1), map) + temp;
+
+        }
+
     }
 
 
