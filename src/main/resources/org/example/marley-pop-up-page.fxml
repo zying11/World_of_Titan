@@ -9,19 +9,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="250.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MarleyPopUpController">
+<AnchorPane prefHeight="250.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MarleyPopUpController">
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Image/AOT%20marley%20pop%20up.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="153.0" layoutY="27.0" prefHeight="30.0" prefWidth="176.0" text="Translation" textFill="WHITE">
+      <Label fx:id="title" layoutX="153.0" layoutY="27.0" prefHeight="30.0" prefWidth="176.0" text="DECRYPTION" textFill="WHITE">
          <font>
             <Font name="Engravers MT" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="translatedWord" alignment="CENTER" contentDisplay="CENTER" layoutX="79.0" layoutY="64.0" prefHeight="71.0" prefWidth="323.0" textAlignment="JUSTIFY" textFill="#12ff00" wrapText="true">
+      <Label fx:id="displayWord" alignment="CENTER" contentDisplay="CENTER" layoutX="79.0" layoutY="64.0" prefHeight="71.0" prefWidth="323.0" textAlignment="JUSTIFY" textFill="#12ff00" wrapText="true">
          <font>
             <Font name="OCR A Extended" size="15.0" />
          </font>

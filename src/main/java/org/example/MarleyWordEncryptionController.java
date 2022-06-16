@@ -3,15 +3,18 @@ package org.example;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
-public class MarleyPopUpController {
+public class MarleyWordEncryptionController {
 
     /**
      * Stage is used to represent a window in a JavaFX desktop application
@@ -31,19 +34,19 @@ public class MarleyPopUpController {
     @FXML
     private Label displayWord;
 
-
     @FXML
-    void initialize() throws IOException{
-        System.out.println(MarleyWordConverterController.decryptedWord);
-        displayWord.setText(MarleyWordConverterController.decryptedWord);
+    void initialize() throws IOException {
 
+        displayWord.setText(MarleyWordConverterController.encryptedWord);
     }
 
     @FXML
-    void OKButtonPressed(ActionEvent event) {
-        //close the popup window when 'OK' is pressed
+    void DecryptButtonPressed(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("marley-word-key-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.close();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }
