@@ -227,33 +227,27 @@ public class MarleyWordConverterController {
             }
 
             //cipher
-            encryptedWord = cipher(translation,encryptMap);
+            encryptedWord = cipher(translation, encryptMap);
 
             System.out.println("The word is encrypted!!");
             System.out.println(encryptedWord);
 
 
-            decryptedWord = cipher(encryptedWord,decryptMap);
+            //forward to marley encryption window
+            Stage stage = new Stage();
+            Parent root;
+            stage.setTitle("Cipher");
 
+            root = FXMLLoader.load((getClass().getResource("marley-word-encryption-page.fxml")));
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
 
-
+            //code for popup window
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.initOwner(input.getScene().getWindow());
+            stage.showAndWait();
 
         }
-
-
-       //forward to marley pop up window
-        Stage stage = new Stage();
-        Parent root;
-        stage.setTitle("Decryption");
-
-        root = FXMLLoader.load((getClass().getResource("marley-word-encryption-page.fxml")));
-        stage.setScene(new Scene(root));
-        stage.setResizable(false);
-
-        //code for popup window
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.initOwner(input.getScene().getWindow());
-        stage.showAndWait();
 
     }
 

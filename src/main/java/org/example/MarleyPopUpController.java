@@ -34,9 +34,9 @@ public class MarleyPopUpController {
 
     @FXML
     void initialize() throws IOException{
-        System.out.println(MarleyWordConverterController.decryptedWord);
-        displayWord.setText(MarleyWordConverterController.decryptedWord);
-
+        String output = MarleyWordConverterController.cipher(MarleyWordConverterController.encryptedWord, MarleyWordConverterController.decryptMap);
+        System.out.println(output);
+        displayWord.setText(output);
     }
 
     @FXML
