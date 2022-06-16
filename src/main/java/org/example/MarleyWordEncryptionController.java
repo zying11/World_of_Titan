@@ -41,7 +41,7 @@ public class MarleyWordEncryptionController {
     }
 
     @FXML
-    void DecryptButtonPressed(ActionEvent event) throws IOException {
+    void DecryptButtonPressed(ActionEvent event) throws IOException {;
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("marley-word-key-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
