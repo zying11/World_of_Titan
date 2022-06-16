@@ -39,8 +39,6 @@ public class MarleyWordConverterController {
     private Label errorLabel;
 
     static MyHashMap map = new MyHashMap();
-    static MyHashMap encryptMap = new MyHashMap();
-    static MyHashMap decryptMap = new MyHashMap();
 
     static String translation;
 
@@ -53,6 +51,8 @@ public class MarleyWordConverterController {
     //for cipher
     static String encryptedWord;
     static String decryptedWord;
+    static MyHashMap encryptMap = new MyHashMap();
+    static MyHashMap decryptMap = new MyHashMap();
 
     @FXML
     void initialize() throws IOException {
@@ -124,9 +124,6 @@ public class MarleyWordConverterController {
 
         encryptMap.put(',', '2');
         decryptMap.put('2',',');
-
-        System.out.println(input.getText());
-
 
     }
 
@@ -231,7 +228,6 @@ public class MarleyWordConverterController {
 
             System.out.println("The word is encrypted!!");
             System.out.println(encryptedWord);
-
 
             //forward to marley encryption window
             Stage stage = new Stage();
