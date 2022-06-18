@@ -13,6 +13,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * This class acts as a controller for prompt user enter num titan page
+ */
 public class PromptUserEnterNumTitanPageController {
     /**
      * Stage is used to represent a window in a JavaFX desktop application
@@ -29,11 +32,20 @@ public class PromptUserEnterNumTitanPageController {
      */
     private Parent root;
 
-    static String input;
+    /**
+     * store number of titan to be generated which enter by user
+     */
+    public static String input;
 
+    /**
+     * A label to enter number of titan to be generated
+     */
     @FXML
     private TextField numOfTitanGenerate;
 
+    /**
+     * A label to show error message when catch wrong input
+     */
     @FXML
     private Label errorLabel;
 

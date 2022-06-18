@@ -13,6 +13,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * This class acts as a controller for generate titan result page
+ */
 public class GenerateTitanResultPageController {
     /**
      * Stage is used to represent a window in a JavaFX desktop application

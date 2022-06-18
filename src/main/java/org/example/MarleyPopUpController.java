@@ -1,6 +1,5 @@
 package org.example;
 
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -30,7 +29,6 @@ public class MarleyPopUpController {
 
     @FXML
     private Label displayWord;
-
 
     @FXML
     void initialize() throws IOException{

@@ -5,7 +5,7 @@ import java.util.*;
 
 public class BreadthFirstSearch {
 
-    static List<List<Integer>> listOfList=new ArrayList<>();
+    public static List<List<Integer>> listOfList=new ArrayList<>();
 
     // Function to form edge between
     // two vertices src and dest

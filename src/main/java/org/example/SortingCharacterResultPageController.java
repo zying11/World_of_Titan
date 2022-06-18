@@ -16,7 +16,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * This class acts as a controller for the sorting character result page
+ */
 public class SortingCharacterResultPageController {
+
     /**
      * Stage is used to represent a window in a JavaFX desktop application
      */
@@ -32,20 +36,56 @@ public class SortingCharacterResultPageController {
      */
     private Parent root;
 
-    static List<CharacterData> heightRanking=new ArrayList<>();
-    List<CharacterData> weightRanking=new ArrayList<>();
-    List<CharacterData> strengthRanking=new ArrayList<>();
-    List<CharacterData> agilityRanking=new ArrayList<>();
-    List<CharacterData> intelligenceRanking=new ArrayList<>();
-    List<CharacterData> coordinationRanking=new ArrayList<>();
-    List<CharacterData> leadershipRanking=new ArrayList<>();
+    /**
+     * List to store the soldiers' name and sorting height info
+     */
+    private List<CharacterData> heightRanking=new ArrayList<>();
 
+    /**
+     * List to store the soldiers' name and sorting weight info
+     */
+    private List<CharacterData> weightRanking=new ArrayList<>();
+
+    /**
+     * List to store the soldiers' name and sorting strength info
+     */
+    private List<CharacterData> strengthRanking=new ArrayList<>();
+
+    /**
+     * List to store the soldiers' name and sorting agility info
+     */
+    private List<CharacterData> agilityRanking=new ArrayList<>();
+
+    /**
+     * List to store the soldiers' name and sorting intelligence info
+     */
+    private List<CharacterData> intelligenceRanking=new ArrayList<>();
+
+    /**
+     * List to store the soldiers' name and sorting coordination info
+     */
+    private List<CharacterData> coordinationRanking=new ArrayList<>();
+
+    /**
+     * List to store the soldiers' name and sorting leadership info
+     */
+    private List<CharacterData> leadershipRanking=new ArrayList<>();
+
+    /**
+     * this vbox is to add template by row everytime to display the sorting attribution result
+     */
     @FXML
     private VBox vBox;
 
+    /**
+     * this label is used to set title name based on attribution entered by user
+     */
     @FXML
     private Label RankingLabel;
 
+    /**
+     * this label is set unit of the attribution
+     */
     @FXML
     private Label valueLabel;
 
@@ -58,12 +98,15 @@ public class SortingCharacterResultPageController {
             RankingLabel.setText("Height Ranking");
             valueLabel.setText("Value (cm)");
 
+            //add sorting height to heightRanking list
             for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Height: " + character.getHeight());
                 heightRanking.add(new CharacterData(character.getName(), character.getHeight()));
             }
             System.out.println();
 
+            //set specific data that need to be display to template
+            //then add template by row to vbox to display it
             for (CharacterData data : heightRanking) {
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sorting-result-template.fxml"));
@@ -84,6 +127,7 @@ public class SortingCharacterResultPageController {
             RankingLabel.setText("Weight Ranking");
             valueLabel.setText("Value (kg)");
 
+            //add sorting weight to weightRanking list
             for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Weight: " + character.getWeight());
                 weightRanking.add(new CharacterData(character.getName(), character.getWeight()));
@@ -109,6 +153,7 @@ public class SortingCharacterResultPageController {
             strengthRanking.clear();
             RankingLabel.setText("Strength Ranking");
 
+            //add sorting strength to strengthRanking list
             for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Strength: " + character.getStrength());
                 strengthRanking.add(new CharacterData(character.getName(), character.getStrength()));
@@ -134,6 +179,7 @@ public class SortingCharacterResultPageController {
             agilityRanking.clear();
             RankingLabel.setText("Agility Ranking");
 
+            //add sorting agility to agilityRanking list
             for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Agility: " + character.getAgility());
                 agilityRanking.add(new CharacterData(character.getName(), character.getAgility()));
@@ -159,6 +205,7 @@ public class SortingCharacterResultPageController {
             intelligenceRanking.clear();
             RankingLabel.setText("Intelligence Ranking");
 
+            //add sorting intelligence to intelligenceRanking list
             for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Intelligence: " + character.getIntelligence());
                 intelligenceRanking.add(new CharacterData(character.getName(), character.getIntelligence()));
@@ -189,6 +236,7 @@ public class SortingCharacterResultPageController {
             }
             System.out.println();
 
+            //add sorting coordination to coordinationRanking list
             for (CharacterData data : coordinationRanking) {
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sorting-result-template.fxml"));
@@ -208,6 +256,7 @@ public class SortingCharacterResultPageController {
             leadershipRanking.clear();
             RankingLabel.setText("Leadership Ranking");
 
+            //add sorting leadership to leadershipRanking list
             for (CharacterData character : MainHomePageController.list) {
                 System.out.println("Name: " + character.getName() + ", " + "Leadership: " + character.getLeadership());
                 leadershipRanking.add(new CharacterData(character.getName(), character.getLeadership()));

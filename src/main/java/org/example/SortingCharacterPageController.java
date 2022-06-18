@@ -15,7 +15,11 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.Objects;
 
+/**
+ * This class acts as a controller for the sorting character page
+ */
 public class SortingCharacterPageController {
+
     /**
      * Stage is used to represent a window in a JavaFX desktop application
      */
@@ -31,12 +35,21 @@ public class SortingCharacterPageController {
      */
     private Parent root;
 
+    /**
+     * Catch which attribution entered by user
+     */
     public static boolean inputHeight=false;
+
     public static boolean inputWeight=false;
+
     public static boolean inputStrength=false;
+
     public static boolean inputAgility=false;
+
     public static boolean inputIntelligence=false;
+
     public static boolean inputCoordination=false;
+
     public static boolean inputLeadership=false;
 
     /**
@@ -45,6 +58,9 @@ public class SortingCharacterPageController {
     @FXML
     private TextField inputAttribute;
 
+    /**
+     * A label to show error message when catch wrong input
+     */
     @FXML
     private Label errorLabel;
 
@@ -58,41 +74,51 @@ public class SortingCharacterPageController {
             System.out.println("Empty input");
             errorLabel.setText("Please enter the attribution!");
         }
+
         //if input is in the scope of attribution
+        //sort the soldiers' characteristic list based on specific attribution entered by user
         else if (inputAttribute.getText().equalsIgnoreCase("height")) {
             inputHeight=true;
             Collections.sort(MainHomePageController.list, new HeightComparator());
         }
+
         else if(inputAttribute.getText().equalsIgnoreCase("weight")){
             inputWeight=true;
             Collections.sort(MainHomePageController.list, new WeightComparator());
         }
+
         else if(inputAttribute.getText().equalsIgnoreCase("strength")){
             inputStrength=true;
             Collections.sort(MainHomePageController.list,new StrengthComparator() );
         }
+
         else if(inputAttribute.getText().equalsIgnoreCase("agility")){
             inputAgility=true;
             Collections.sort(MainHomePageController.list,new AgilityComparator());
         }
+
         else if(inputAttribute.getText().equalsIgnoreCase("intelligence")){
             inputIntelligence=true;
             Collections.sort(MainHomePageController.list,new IntelligenceComparator());
         }
+
         else if(inputAttribute.getText().equalsIgnoreCase("coordination")){
             inputCoordination=true;
             Collections.sort(MainHomePageController.list,new CoordinationComparator());
         }
+
         else if(inputAttribute.getText().equalsIgnoreCase("leadership")){
             inputLeadership=true;
             Collections.sort(MainHomePageController.list,new LeadershipComparator());
         }
+
         //if input is out of scope of the attribution
         else{
             inputError=true;
             System.out.println("not found");
             errorLabel.setText("Attribution not found");
         }
+
         //when no error, go to character sorting result page
         if(!inputError){
             //forward to Character Sorting Result page when search button pressed

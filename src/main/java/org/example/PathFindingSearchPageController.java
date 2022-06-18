@@ -16,7 +16,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * This class acts as a controller for the path finding search page
+ */
 public class PathFindingSearchPageController {
+
     /**
      * Stage is used to represent a window in a JavaFX desktop application
      */
@@ -32,15 +36,27 @@ public class PathFindingSearchPageController {
      */
     private Parent root;
 
-    static List<List<Integer>> ans=new ArrayList<>();
+    /**
+     * store the best path result
+     */
+    private static List<List<Integer>> ans=new ArrayList<>();
 
-    static String showOutput;
+    /**
+     * display every best path if more than one best path
+     */
+    public static String showOutput;
 
-    static String output;
+    /**
+     * store best path temporarily
+     */
+    private static String output;
 
     @FXML
     private TextField startingPoint;
 
+    /**
+     * A label to show error message when catch wrong input
+     */
     @FXML
     private Label errorLabel;
 
@@ -150,7 +166,7 @@ public class PathFindingSearchPageController {
 
     @FXML
     void BackButtonPressed(MouseEvent event) throws IOException {
-        //forward to path finding action page when back button pressed
+        //forward to Path Finding Action page when back button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("path-finding-action-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

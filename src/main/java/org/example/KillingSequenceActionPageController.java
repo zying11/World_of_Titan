@@ -11,7 +11,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * This class acts as a controller for killing sequence action page
+ */
 public class KillingSequenceActionPageController {
+
     /**
      * Stage is used to represent a window in a JavaFX desktop application
      */
@@ -27,19 +31,19 @@ public class KillingSequenceActionPageController {
      */
     private Parent root;
 
-    static boolean Reiner;
-    static boolean Armin;
-    static boolean Annie;
-    static boolean Bertholdt;
-    static boolean Jean;
-    static boolean Sasha;
-    static boolean Connie;
-    static boolean Mikasa;
-    static boolean Eren;
-    static boolean Historia;
-    static boolean Levi;
-    static boolean Erwin;
-    static boolean Hange;
+    public static boolean Reiner;
+    public static boolean Armin;
+    public static boolean Annie;
+    public static boolean Bertholdt;
+    public static boolean Jean;
+    public static boolean Sasha;
+    public static boolean Connie;
+    public static boolean Mikasa;
+    public static boolean Eren;
+    public static boolean Historia;
+    public static boolean Levi;
+    public static boolean Erwin;
+    public static boolean Hange;
 
     @FXML
     void initialize() throws IOException{
@@ -61,7 +65,7 @@ public class KillingSequenceActionPageController {
 
     @FXML
     void ReinerButtonPressed(MouseEvent event) throws IOException{
-        //forward to killing sequence result page when soldier button pressed
+        //forward to Killing Sequence Result page when soldier button pressed
         Reiner=true;
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("killing-sequence-result-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -198,7 +202,7 @@ public class KillingSequenceActionPageController {
 
     @FXML
     void BackButtonPressed(MouseEvent event) throws IOException {
-        //forward to generate titan result page when back button pressed
+        //forward to Generate Titan Result page when back button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("generate-titan-result-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

@@ -11,7 +11,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * This class acts as a controller for the path finding action page
+ */
 public class PathFindingActionPageController {
+
     /**
      * Stage is used to represent a window in a JavaFX desktop application
      */
@@ -29,7 +33,7 @@ public class PathFindingActionPageController {
 
     @FXML
     void FindPathButtonPressed(MouseEvent event) throws IOException {
-        //forward to path finding search page when find path button pressed
+        //forward to Path Finding Search page when find path button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("path-finding-search-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -39,7 +43,7 @@ public class PathFindingActionPageController {
 
     @FXML
     void FindBestPathButtonPressed(MouseEvent event) throws IOException {
-        //forward to path finding search page when find path button pressed
+        //forward to Best Path Search page when find best path button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("best-path-search-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -49,7 +53,7 @@ public class PathFindingActionPageController {
 
     @FXML
     void BackButtonPressed(MouseEvent event) throws IOException {
-        //forward to choosing action page when home button pressed
+        //forward to Choosing Action page when home button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("choosing-action-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

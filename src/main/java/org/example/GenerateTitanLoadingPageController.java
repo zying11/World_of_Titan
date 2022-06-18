@@ -12,6 +12,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * This class acts as a controller for generate titan loading page
+ */
 public class GenerateTitanLoadingPageController {
 
     /**
@@ -34,22 +37,25 @@ public class GenerateTitanLoadingPageController {
      * in priority queue form, which priority the danger risk of titan
      * the most dangerous titan will come out first
     */
-    static List<TitanData> titanToKilledList=new ArrayList<>();
+    public static List<TitanData> titanToKilledList=new ArrayList<>();
+
+    private int randomType;
+
+    private int dangerRisk;
+
+    private int walkingLeg;
+
+    private String walkingPattern;
+
+    private String clmbingSkill;
+
+    private String titanType;
 
     Random random =new Random();
 
-    int randomType;
-
-    int dangerRisk;
-
-    int walkingLeg;
-
-    String walkingPattern;
-
-    String clmbingSkill;
-
-    String titanType;
-
+    /**
+     * A label to set the number of titan which need to be generated
+     */
     @FXML
     private Label numberTitanLabel;
 
@@ -192,7 +198,7 @@ public class GenerateTitanLoadingPageController {
 
     @FXML
     void ResultButtonPressed(MouseEvent event) throws IOException{
-        //forward to generate titan result page when result button pressed
+        //forward to Generate Titan Result page when result button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("generate-titan-result-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

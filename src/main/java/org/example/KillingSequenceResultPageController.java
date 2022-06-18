@@ -12,7 +12,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * This class acts as a controller for killing sequence result page
+ */
 public class KillingSequenceResultPageController {
+
     /**
      * Stage is used to represent a window in a JavaFX desktop application
      */
@@ -28,9 +32,15 @@ public class KillingSequenceResultPageController {
      */
     private Parent root;
 
+    /**
+     * this label is used as title
+     */
     @FXML
     private Label label1;
 
+    /**
+     * this label is used as heading 1
+     */
     @FXML
     private Label label2;
 
@@ -44,68 +54,83 @@ public class KillingSequenceResultPageController {
     void initialize()throws IOException{
         CharacterData soldierData;
 
+        //to calculate the sum of strength and agility of soldier
         int sumSoldierAbility=0;
 
+        //check which button is chosen by user
+        //store the characteristic of the specific soldier's info to soldierData
         if(KillingSequenceActionPageController.Reiner){
             soldierData=MainHomePageController.list.get(0);
             sumSoldierAbility= Integer.parseInt(soldierData.getStrength())+
                                Integer.parseInt(soldierData.getAgility());
         }
+
         else if(KillingSequenceActionPageController.Armin){
             soldierData=MainHomePageController.list.get(1);
             sumSoldierAbility= Integer.parseInt(soldierData.getStrength())+
                     Integer.parseInt(soldierData.getAgility());
         }
+
         else if(KillingSequenceActionPageController.Annie){
             soldierData=MainHomePageController.list.get(2);
             sumSoldierAbility= Integer.parseInt(soldierData.getStrength())+
                     Integer.parseInt(soldierData.getAgility());
         }
+
         else if(KillingSequenceActionPageController.Bertholdt){
             soldierData=MainHomePageController.list.get(3);
             sumSoldierAbility= Integer.parseInt(soldierData.getStrength())+
                     Integer.parseInt(soldierData.getAgility());
         }
+
         else if(KillingSequenceActionPageController.Jean){
             soldierData=MainHomePageController.list.get(4);
             sumSoldierAbility= Integer.parseInt(soldierData.getStrength())+
                     Integer.parseInt(soldierData.getAgility());
         }
+
         else if(KillingSequenceActionPageController.Sasha){
             soldierData=MainHomePageController.list.get(5);
             sumSoldierAbility= Integer.parseInt(soldierData.getStrength())+
                     Integer.parseInt(soldierData.getAgility());
         }
+
         else if(KillingSequenceActionPageController.Connie){
             soldierData=MainHomePageController.list.get(6);
             sumSoldierAbility= Integer.parseInt(soldierData.getStrength())+
                     Integer.parseInt(soldierData.getAgility());
         }
+
         else if(KillingSequenceActionPageController.Mikasa){
             soldierData=MainHomePageController.list.get(7);
             sumSoldierAbility= Integer.parseInt(soldierData.getStrength())+
                     Integer.parseInt(soldierData.getAgility());
         }
+
         else if(KillingSequenceActionPageController.Eren){
             soldierData=MainHomePageController.list.get(8);
             sumSoldierAbility= Integer.parseInt(soldierData.getStrength())+
                     Integer.parseInt(soldierData.getAgility());
         }
+
         else if(KillingSequenceActionPageController.Historia){
             soldierData=MainHomePageController.list.get(9);
             sumSoldierAbility= Integer.parseInt(soldierData.getStrength())+
                     Integer.parseInt(soldierData.getAgility());
         }
+
         else if(KillingSequenceActionPageController.Levi){
             soldierData=MainHomePageController.list.get(10);
             sumSoldierAbility= Integer.parseInt(soldierData.getStrength())+
                     Integer.parseInt(soldierData.getAgility());
         }
+
         else if(KillingSequenceActionPageController.Erwin){
             soldierData=MainHomePageController.list.get(11);
             sumSoldierAbility= Integer.parseInt(soldierData.getStrength())+
                     Integer.parseInt(soldierData.getAgility());
         }
+
         else if(KillingSequenceActionPageController.Hange){
             soldierData=MainHomePageController.list.get(12);
             sumSoldierAbility= Integer.parseInt(soldierData.getStrength())+
@@ -113,6 +138,7 @@ public class KillingSequenceResultPageController {
         }
         System.out.println("\n"+sumSoldierAbility);
 
+        //calculate distance moved and killing sequence
         boolean ableToKillTitan=false;
         int previousPosition=0,currentPosition=0;
         int totalDistanceMoved=0;
@@ -194,7 +220,7 @@ public class KillingSequenceResultPageController {
 
     @FXML
     void BackButtonPressed(MouseEvent event) throws IOException {
-        //forward to Choosing Action Page when battle button pressed
+        //forward to Killing Sequence Action page when back button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("killing-sequence-action-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

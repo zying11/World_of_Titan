@@ -32,27 +32,55 @@ public class MainHomePageController {
      */
     private Parent root;
 
+    /**
+     * A list to store each character's characteristic in CharacterData class
+     */
     public static LinkedList<CharacterData> list=new LinkedList<>();
 
+    /**
+     * A list to store each character's name
+     */
     private  LinkedList<String> nameList=new LinkedList<>();
 
+    /**
+     * A list to store each character's height
+     */
     private LinkedList<String> heightList=new LinkedList<>();
 
+    /**
+     * A list to store each character's weight
+     */
     private LinkedList<String> weightList=new LinkedList<>();
 
+    /**
+     * A list to store each character's strength
+     */
     private LinkedList<String> strengthList=new LinkedList<>();
 
+    /**
+     * A list to store each character's agility
+     */
     private LinkedList<String> agilityList=new LinkedList<>();
 
+    /**
+     * A list to store each character's intelligence
+     */
     private LinkedList<String> intelligenceList=new LinkedList<>();
 
+    /**
+     * A list to store each character's coordination
+     */
     private LinkedList<String> coordinationList=new LinkedList<>();
 
+    /**
+     * A list to store each character's leadership
+     */
     private LinkedList<String> leadershipList=new LinkedList<>();
 
     @FXML
     void initialize()throws IOException{
         //clear element in the list everytime when come back to this method
+        //to avoid duplicate
         nameList.clear();
         heightList.clear();
         weightList.clear();
@@ -63,7 +91,8 @@ public class MainHomePageController {
         leadershipList.clear();
         list.clear();
 
-        //catch the text file, if TRUE -> store the information of characters in linked list
+        //catch the text file,
+        //if TRUE -> store the information of characters to specific characteristic lists
         try {
             Scanner input = new Scanner(new FileInputStream("characters.txt"));
 
@@ -104,8 +133,8 @@ public class MainHomePageController {
     }
 
     @FXML
-    void BattleButtonPressed(MouseEvent event) throws IOException{
-        //forward to Choosing Action Page when battle button pressed
+    void PlayButtonPressed(MouseEvent event) throws IOException{
+        //forward to Choosing Action Page when play button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("choosing-action-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

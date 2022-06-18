@@ -18,6 +18,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * This class acts as a controller for the binary search character page
+ */
 public class BinarySearchCharacterPageController {
 
     /**
@@ -41,28 +44,52 @@ public class BinarySearchCharacterPageController {
     @FXML
     private TextField inputAttribute;
 
+    /**
+     * A text field to prompt user enter the attribution value of soldiers
+     */
     @FXML
     private TextField inputAttributeValue;
 
+    /**
+     * A label to show error message when catch wrong input
+     */
     @FXML
     private Label errorLabel;
 
-    List<String> nameSort = new ArrayList<>();
+    /**
+     * A list to store the sorting result based on attribution
+     */
+    private List<String> nameSort = new ArrayList<>();
 
-    List<Integer> heightSort = new ArrayList<>();
-    List<Integer> weightSort = new ArrayList<>();
-    List<Integer> strengthSort = new ArrayList<>();
-    List<Integer> agilitySort = new ArrayList<>();
-    List<Integer> intelligenceSort = new ArrayList<>();
-    List<Integer> coordinationSort = new ArrayList<>();
-    List<Integer> leadershipSort = new ArrayList<>();
+    private List<Integer> heightSort = new ArrayList<>();
 
+    private List<Integer> weightSort = new ArrayList<>();
+
+    private List<Integer> strengthSort = new ArrayList<>();
+
+    private List<Integer> agilitySort = new ArrayList<>();
+
+    private List<Integer> intelligenceSort = new ArrayList<>();
+
+    private List<Integer> coordinationSort = new ArrayList<>();
+
+    private List<Integer> leadershipSort = new ArrayList<>();
+
+    /**
+     * Catch which attribution entered by user
+     */
     public static boolean inputHeight = false;
+
     public static boolean inputWeight = false;
+
     public static boolean inputStrength = false;
+
     public static boolean inputAgility = false;
+
     public static boolean inputIntelligence = false;
+
     public static boolean inputCoordination = false;
+
     public static boolean inputLeadership = false;
 
     //output for corresponding names
@@ -333,7 +360,7 @@ public class BinarySearchCharacterPageController {
 
     @FXML
     void BackToCharacterButtonPressed(ActionEvent event) throws IOException {
-        //forward to Sorted Character page when back button pressed
+        //forward to Character page when back button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("character-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

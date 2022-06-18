@@ -8,11 +8,14 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * This class acts as a controller for the binary search character page
+ */
 public class ChoosingActionPageController {
+
     /**
      * Stage is used to represent a window in a JavaFX desktop application
      */
@@ -40,7 +43,7 @@ public class ChoosingActionPageController {
 
     @FXML
     void GenerateTitanButtonPressed(MouseEvent event) throws IOException{
-        //forward to prompt user enter number of titan page when generate titan button pressed
+        //forward to Prompt User Enter Number of Titan page when generate titan button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("prompt-user-enter-numTitan-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -50,7 +53,7 @@ public class ChoosingActionPageController {
 
     @FXML
     void PathFindingButtonPressed(MouseEvent event) throws IOException{
-        //forward to path finding action page when path finding button pressed
+        //forward to Path Finding Action page when path finding button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("path-finding-action-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -60,7 +63,7 @@ public class ChoosingActionPageController {
 
     @FXML
     void MarleyWordButtonPressed(MouseEvent event) throws IOException{
-        //forward to marley word converter page when word button pressed
+        //forward to Marley Word Converter page when word button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("marley-word-converter-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -70,7 +73,7 @@ public class ChoosingActionPageController {
 
     @FXML
     void WeakestWallButtonPressed(MouseEvent event) throws IOException{
-        //forward to weakest wall search page when word weakest wall button pressed
+        //forward to Weakest Wall Search page when weakest wall button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("weakest-wall-search-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

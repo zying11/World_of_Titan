@@ -16,7 +16,11 @@ import java.util.*;
 
 import static org.example.BreadthFirstSearch.add_edge;
 
+/**
+ * This class acts as a controller for best path search page
+ */
 public class BestPathSearchPageController {
+
     /**
      * Stage is used to represent a window in a JavaFX desktop application
      */
@@ -32,15 +36,21 @@ public class BestPathSearchPageController {
      */
     private Parent root;
 
-    static List<List<Integer>> ansList=new ArrayList<>();
+    private static List<List<Integer>> ansList=new ArrayList<>();
 
-    static String showOutput;
+    public static String showOutput;
 
-    static String output;
+    private static String output;
 
+    /**
+     * A label to show error message when catch wrong input
+     */
     @FXML
     private Label errorLabel;
 
+    /**
+     * A text field to enter the location of Titan
+     */
     @FXML
     private TextField locationOfTitan;
 
@@ -154,7 +164,7 @@ public class BestPathSearchPageController {
 
     @FXML
     void BackButtonPressed(MouseEvent event) throws IOException {
-        //forward to path finding action page when back button pressed
+        //forward to Path Finding Action page when back button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("path-finding-action-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

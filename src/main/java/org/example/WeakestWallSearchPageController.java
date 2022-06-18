@@ -15,7 +15,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * This class acts as a controller for the weakest wall search page
+ */
 public class WeakestWallSearchPageController {
+
     /**
      * Stage is used to represent a window in a JavaFX desktop application
      */
@@ -31,8 +35,14 @@ public class WeakestWallSearchPageController {
      */
     private Parent root;
 
+    /**
+     * A list to store list
+     */
     private List<List<Integer>> listOfList=new ArrayList<>();
 
+    /**
+     * A list to store each layer of value
+     */
     private List<Integer> innerList=new ArrayList<>();
 
     public static int weakestWallPosition;
@@ -43,6 +53,9 @@ public class WeakestWallSearchPageController {
     @FXML
     private TextArea numberOfEdges;
 
+    /**
+     * A label to show error message when catch wrong input
+     */
     @FXML
     private Label errorLabel;
 
@@ -149,7 +162,7 @@ public class WeakestWallSearchPageController {
 
     @FXML
     void BackButtonPressed(MouseEvent event) throws IOException {
-        //forward to choosing action page when home button pressed
+        //forward to Choosing Action page when back button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("choosing-action-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

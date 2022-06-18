@@ -15,7 +15,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * This class acts as a controller for the character page
+ */
 public class CharacterController {
+
     /**
      * Stage is used to represent a window in a JavaFX desktop application
      */
@@ -31,30 +35,57 @@ public class CharacterController {
      */
     private Parent root;
 
+    /**
+     * Table to show all the soldiers' characteristics
+     */
     @FXML
     private TableView table;
 
+    /**
+     * A table column specific to soldiers' name
+     */
     @FXML
     private TableColumn<CharacterData,String> name;
 
+    /**
+     * A table column specific to soldiers' height
+     */
     @FXML
     private TableColumn<CharacterData,String> height;
 
+    /**
+     * A table column specific to soldiers' weight
+     */
     @FXML
     private TableColumn<CharacterData,String> weight;
 
+    /**
+     * A table column specific to soldiers' strength
+     */
     @FXML
     private TableColumn<CharacterData,String> strength;
 
+    /**
+     * A table column specific to soldiers' agility
+     */
     @FXML
     private TableColumn<CharacterData,String> agility;
 
+    /**
+     * A table column specific to soldiers' intelligence
+     */
     @FXML
     private TableColumn<CharacterData,String> intelligence;
 
+    /**
+     * A table column specific to soldiers' coordination
+     */
     @FXML
     private TableColumn<CharacterData,String> coordination;
 
+    /**
+     * A table column specific to soldiers' leadership
+     */
     @FXML
     private TableColumn<CharacterData,String> leadership;
 
@@ -72,7 +103,8 @@ public class CharacterController {
         leadership.setCellValueFactory(new PropertyValueFactory<>("leadership"));
 
         for(int i=0;i<MainHomePageController.list.size();i++){
-            //add the list information to table view, to display it in the table view
+            //retrieve each soldier's information from class MainHomePageController
+            //and display it in table view
             table.getItems().add(MainHomePageController.list.get(i));
         }
     }
@@ -89,7 +121,7 @@ public class CharacterController {
 
     @FXML
     void SortingButtonPressed(MouseEvent event) throws  IOException{
-        //forward to character sorting page when sorting button pressed
+        //forward to Character Sorting page when sorting button pressed
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sorting-character-page.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

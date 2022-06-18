@@ -68,10 +68,7 @@ public class CharacterData {
         return leadership;
     }
 
-
-
     //setter method
-
     public void setName(String name) {
         this.name = name;
     }
@@ -117,10 +114,11 @@ public class CharacterData {
                 ", leadership='" + leadership + '\'' +
                 '}'+'\n';
     }
-
-
 }
 
+/**
+ * Helper class implementing Comparator interface based on soldiers'height in descending order
+ */
 class HeightComparator implements Comparator<CharacterData> {
     @Override
     public int compare(CharacterData character1, CharacterData character2)
@@ -134,6 +132,9 @@ class HeightComparator implements Comparator<CharacterData> {
     }
 }
 
+/**
+ * Helper class implementing Comparator interface based on soldiers'weight in descending order
+ */
 class WeightComparator implements Comparator<CharacterData> {
     @Override
     public int compare(CharacterData character1, CharacterData character2)
@@ -147,6 +148,9 @@ class WeightComparator implements Comparator<CharacterData> {
     }
 }
 
+/**
+ * Helper class implementing Comparator interface based on soldiers'strength in descending order
+ */
 class StrengthComparator implements Comparator<CharacterData> {
     @Override
     public int compare(CharacterData character1, CharacterData character2)
@@ -160,6 +164,9 @@ class StrengthComparator implements Comparator<CharacterData> {
     }
 }
 
+/**
+ * Helper class implementing Comparator interface based on soldiers'agility in descending order
+ */
 class AgilityComparator implements Comparator<CharacterData> {
     @Override
     public int compare(CharacterData character1, CharacterData character2)
@@ -173,6 +180,9 @@ class AgilityComparator implements Comparator<CharacterData> {
     }
 }
 
+/**
+ * Helper class implementing Comparator interface based on soldiers'intelligence in descending order
+ */
 class IntelligenceComparator implements Comparator<CharacterData> {
     @Override
     public int compare(CharacterData character1, CharacterData character2)
@@ -186,6 +196,9 @@ class IntelligenceComparator implements Comparator<CharacterData> {
     }
 }
 
+/**
+ * Helper class implementing Comparator interface based on soldiers'coordination in descending order
+ */
 class CoordinationComparator implements Comparator<CharacterData> {
     @Override
     public int compare(CharacterData character1, CharacterData character2)
@@ -199,6 +212,9 @@ class CoordinationComparator implements Comparator<CharacterData> {
     }
 }
 
+/**
+ * Helper class implementing Comparator interface based on soldiers'leadership in descending order
+ */
 class LeadershipComparator implements Comparator<CharacterData> {
     @Override
     public int compare(CharacterData character1, CharacterData character2)

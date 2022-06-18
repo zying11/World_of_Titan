@@ -110,6 +110,9 @@ public class TitanData {
     }
 }
 
+/**
+ * Helper class implementing Comparator interface based on titans' danger risk in descending order
+ */
 class DangerRiskComparator implements Comparator<TitanData> {
     @Override
     public int compare(TitanData o1, TitanData o2) {

@@ -10,7 +10,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * This class acts as a controller for best path result window
+ */
 public class BestPathResultWindowController {
+
     /**
      * Stage is used to represent a window in a JavaFX desktop application
      */

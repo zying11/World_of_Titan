@@ -3,7 +3,7 @@ package org.example;
 import java.util.ArrayList;
 
 public class MyHashMap {
-    ArrayList<Entry> map;
+    private ArrayList<Entry> map;
 
     public MyHashMap(){
         this.map = new ArrayList<>();
@@ -21,10 +21,6 @@ public class MyHashMap {
         }
         return 0;
     }
-
-
-
-
 }
 
 class Entry{

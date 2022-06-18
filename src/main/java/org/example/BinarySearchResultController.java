@@ -10,6 +10,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * This class acts as a controller for the sorting character page
+ */
 public class BinarySearchResultController {
 
     /**
@@ -27,12 +30,21 @@ public class BinarySearchResultController {
      */
     private Parent root;
 
+    /**
+     * this label is used to set ability title name entered by user
+     */
     @FXML
     private Label outputAbility;
 
+    /**
+     * this label is used to set ability value entered by user
+     */
     @FXML
     private Label outputAbilityValue;
 
+    /**
+     * this label is used to set output of the soldier's name
+     */
     @FXML
     private Label outputNames;
 
@@ -42,41 +54,45 @@ public class BinarySearchResultController {
             outputAbility.setText("Height");
             outputAbilityValue.setText(BinarySearchCharacterPageController.input_attribute_value);
             outputNames.setText(BinarySearchCharacterPageController.output);
+            BinarySearchCharacterPageController.inputHeight=false;
         }
         else if(BinarySearchCharacterPageController.inputWeight){
             outputAbility.setText("Weight");
             outputAbilityValue.setText(BinarySearchCharacterPageController.input_attribute_value);
             outputNames.setText(BinarySearchCharacterPageController.output);
+            BinarySearchCharacterPageController.inputWeight=false;
         }
         else if(BinarySearchCharacterPageController.inputStrength){
             outputAbility.setText("Strength");
             outputAbilityValue.setText(BinarySearchCharacterPageController.input_attribute_value);
             outputNames.setText(BinarySearchCharacterPageController.output);
+            BinarySearchCharacterPageController.inputStrength=false;
         }
         else if(BinarySearchCharacterPageController.inputAgility){
             outputAbility.setText("Agility");
             outputAbilityValue.setText(BinarySearchCharacterPageController.input_attribute_value);
             outputNames.setText(BinarySearchCharacterPageController.output);
+            BinarySearchCharacterPageController.inputAgility=false;
         }
         else if(BinarySearchCharacterPageController.inputIntelligence){
             outputAbility.setText("Intelligence");
             outputAbilityValue.setText(BinarySearchCharacterPageController.input_attribute_value);
             outputNames.setText(BinarySearchCharacterPageController.output);
+            BinarySearchCharacterPageController.inputIntelligence=false;
         }
         else if(BinarySearchCharacterPageController.inputCoordination){
             outputAbility.setText("Coordination");
             outputAbilityValue.setText(BinarySearchCharacterPageController.input_attribute_value);
             outputNames.setText(BinarySearchCharacterPageController.output);
+            BinarySearchCharacterPageController.inputCoordination=false;
         }
         else if(BinarySearchCharacterPageController.inputLeadership){
             outputAbility.setText("Leadership");
             outputAbilityValue.setText(BinarySearchCharacterPageController.input_attribute_value);
             outputNames.setText(BinarySearchCharacterPageController.output);
+            BinarySearchCharacterPageController.inputLeadership=false;
         }
-
-
     }
-
 
     @FXML
     void OKButtonPressed(ActionEvent event) {
@@ -84,7 +100,4 @@ public class BinarySearchResultController {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.close();
     }
-
-
-
 }
