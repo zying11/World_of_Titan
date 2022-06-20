@@ -1,4 +1,3 @@
-
 package org.example;
 
 import java.util.*;
@@ -9,14 +8,14 @@ public class BreadthFirstSearch {
 
     // Function to form edge between
     // two vertices src and dest
-    static void add_edge(ArrayList<ArrayList<Integer>> adj, int src, int dest){
+    public static void add_edge(ArrayList<ArrayList<Integer>> adj, int src, int dest){
         adj.get(src).add(dest);
         adj.get(dest).add(src);
     }
 
     // Function which finds all the paths
     // and stores it in paths array
-    static void find_paths(ArrayList<ArrayList<Integer>> paths, ArrayList<Integer> path,
+    private static void find_paths(ArrayList<ArrayList<Integer>> paths, ArrayList<Integer> path,
                            ArrayList<ArrayList<Integer>> parent, int n, int u) {
         // Base Case
         if (u == -1) {
@@ -42,7 +41,7 @@ public class BreadthFirstSearch {
 
     // Function which performs bfs
     // from the given source vertex
-    static void bfs(ArrayList<ArrayList<Integer>> adj, ArrayList<ArrayList<Integer>> parent,
+    private static void bfs(ArrayList<ArrayList<Integer>> adj, ArrayList<ArrayList<Integer>> parent,
                     int n, int start) {
 
         // dist will contain shortest distance
@@ -88,7 +87,7 @@ public class BreadthFirstSearch {
 
     // Function which prints all the paths
     // from start to end
-    static void print_paths(ArrayList<ArrayList<Integer>> adj, int n, int start, int end){
+    public static void print_paths(ArrayList<ArrayList<Integer>> adj, int n, int start, int end){
         listOfList.clear();
 
         ArrayList<ArrayList<Integer>> paths = new ArrayList<>();
