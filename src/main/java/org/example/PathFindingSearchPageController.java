@@ -153,7 +153,7 @@ public class PathFindingSearchPageController {
         if(!inputError) {
             Stage stage = new Stage();
             Parent root;
-            stage.setTitle("Weakest Part");
+            stage.setTitle("Hamiltonian Cycle(find path)");
             //forward to Path Finding Result window when go button pressed
             root = FXMLLoader.load((getClass().getResource("path-finding-result-window.fxml")));
             stage.setScene(new Scene(root));

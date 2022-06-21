@@ -259,7 +259,7 @@ public class BinarySearchCharacterPageController {
         if (!indicator) {
             Stage stage = new Stage();
             Parent root;
-            stage.setTitle("Result Window");
+            stage.setTitle("Binary Search Result Window");
             //forward to Binary Search Result window when search button pressed
             root = FXMLLoader.load((getClass().getResource("binary-search-result.fxml")));
             stage.setScene(new Scene(root));
