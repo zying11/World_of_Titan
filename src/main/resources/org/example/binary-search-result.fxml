@@ -10,21 +10,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="250.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.BinarySearchResultController">
+<AnchorPane prefHeight="250.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.BinarySearchResultController">
    <children>
-      <ImageView pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="300.0" fitWidth="601.0" layoutY="-24.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Image/AOT%20binary%20search%20result.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="outputNames" layoutX="166.0" layoutY="134.0" prefHeight="19.0" prefWidth="326.0" textFill="#fffb00">
+      <Label fx:id="outputNames" alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="170.0" prefHeight="19.0" prefWidth="530.0" textFill="#fffb00">
          <font>
             <Font name="Constantia Bold" size="15.0" />
          </font>
          <effect>
             <DropShadow />
          </effect></Label>
-      <Label blendMode="HARD_LIGHT" layoutX="105.0" layoutY="47.0" style="-fx-background-color: IVORY;" text="Ability:">
+      <Label blendMode="HARD_LIGHT" layoutX="199.0" layoutY="56.0" style="-fx-background-color: IVORY;" text="Ability:">
          <font>
             <Font name="Constantia Bold" size="15.0" />
          </font>
@@ -32,7 +32,7 @@
             <InnerShadow />
          </effect>
       </Label>
-      <Label blendMode="HARD_LIGHT" layoutX="108.0" layoutY="91.0" style="-fx-background-color: ivory;" text="Value:">
+      <Label blendMode="HARD_LIGHT" layoutX="354.0" layoutY="56.0" style="-fx-background-color: ivory;" text="Value:">
          <font>
             <Font name="Constantia Bold" size="15.0" />
          </font>
@@ -40,7 +40,7 @@
             <InnerShadow />
          </effect>
       </Label>
-      <Label blendMode="HARD_LIGHT" layoutX="43.0" layoutY="134.0" style="-fx-background-color: IVORY;" text="Soldier's Name:">
+      <Label blendMode="HARD_LIGHT" layoutX="245.0" layoutY="138.0" style="-fx-background-color: IVORY;" text="Soldier's Name:">
          <font>
             <Font name="Constantia Bold" size="15.0" />
          </font>
@@ -48,21 +48,21 @@
             <InnerShadow />
          </effect>
       </Label>
-      <Label fx:id="outputAbility" layoutX="166.0" layoutY="47.0" prefHeight="17.0" prefWidth="168.0" textFill="#fffb00">
+      <Label fx:id="outputAbility" alignment="CENTER" contentDisplay="CENTER" layoutX="170.0" layoutY="85.0" prefHeight="19.0" prefWidth="110.0" textFill="#fffb00">
          <font>
             <Font name="Constantia Bold" size="15.0" />
          </font>
          <effect>
             <DropShadow />
          </effect></Label>
-      <Label fx:id="outputAbilityValue" layoutX="166.0" layoutY="91.0" prefHeight="17.0" prefWidth="146.0" textFill="#fffb00">
+      <Label fx:id="outputAbilityValue" alignment="CENTER" contentDisplay="CENTER" layoutX="321.0" layoutY="85.0" prefHeight="19.0" prefWidth="110.0" textFill="#fffb00">
          <font>
             <Font name="Constantia Bold" size="15.0" />
          </font>
          <effect>
             <DropShadow />
          </effect></Label>
-      <Button layoutX="227.0" layoutY="197.0" mnemonicParsing="false" onAction="#OKButtonPressed" prefHeight="17.0" prefWidth="45.0" style="-fx-background-color: MISTYROSE;" text="OK">
+      <Button layoutX="277.0" layoutY="215.0" mnemonicParsing="false" onAction="#OKButtonPressed" prefHeight="17.0" prefWidth="45.0" style="-fx-background-color: MISTYROSE;" text="OK">
          <font>
             <Font name="Constantia Bold" size="15.0" />
          </font>
