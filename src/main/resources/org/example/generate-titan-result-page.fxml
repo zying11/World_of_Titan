@@ -85,7 +85,7 @@
             <DropShadow />
          </effect>
       </ScrollPane>
-      <Button layoutX="770.0" layoutY="537.0" mnemonicParsing="false" onMouseClicked="#KillingSequenceButtonPressed" style="-fx-background-color: LIGHTCYAN; -fx-background-radius: 15;" text="Killing Sequence">
+      <Button layoutX="820.0" layoutY="537.0" mnemonicParsing="false" onMouseClicked="#KillingSequenceButtonPressed" style="-fx-background-color: LIGHTCYAN; -fx-background-radius: 15;" text="Kill Titan">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
